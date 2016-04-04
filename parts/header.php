@@ -30,12 +30,12 @@
 
 </head>
 <body>
-	<?php include_once('/srv/www/dbrains/htdocs/parts/svg-defs.php'); ?>
+	<?php include_once('/var/www/vhosts/jacobdubail.com/dbrains.jacobdubail.com/parts/svg-defs.php'); ?>
 	<!--[if IE]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 	<![endif]-->
 
 
-	<?php include_once('/srv/www/dbrains/htdocs/parts/nav'.$nav.'.php'); ?>
+	<?php include_once('/var/www/vhosts/jacobdubail.com/dbrains.jacobdubail.com/parts/nav'.$nav.'.php'); ?>
 
 	<main class="site__content" role="main">
