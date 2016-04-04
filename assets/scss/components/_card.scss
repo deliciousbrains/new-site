@@ -1,0 +1,41 @@
+@include b(card) {
+
+	@include e(link) {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			.card__media {
+				transform: scale(1.05);
+			}
+		}
+	}
+	@include e(figure) {
+		text-align: left;
+		//background-color: #fff;
+		overflow: hidden;
+	}
+
+	@include e(media) {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+		transition: all .2s ease;
+	}
+	@include e(caption) {
+		padding: .75rem 1rem 1rem;
+		background-color: #fff;
+		z-index: 10;
+		position: relative;
+	}
+	@include e(title) {
+		color: #000;
+	}
+	@include e(text) {
+		color: palette(grey,text);
+	}
+
+	@include e(badge) {
+
+	}
+
+}

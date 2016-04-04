@@ -1,0 +1,416 @@
+@include b(about) {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-top: 2rem;
+	justify-content: center;
+	text-align: center;
+	max-width: $max-width;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	padding-left: 5%;
+	padding-right: 5%;
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
+	@include e(person) {
+		margin-bottom: 2.5rem;
+		padding-left: $half-gutter;
+		padding-right: $half-gutter;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		flex: 1 1 100%;
+		max-width: 100%;
+
+		@include bp(sm) {
+			flex: 1 1 50%;
+			max-width: 50%;
+		}
+
+		@include bp(md) {
+			flex: 1 1 33.333%;
+			max-width: 33.333%;
+		}
+
+		@include bp(lg) {
+			flex: 1 1 25%;
+			max-width: 25%;
+		}
+
+		@include m(blend) {
+			img {
+				width: 160px;
+				height: 160px;
+				//display: none;
+			}
+			// span {
+			// 	display: block;
+			// 	width: 160px;
+			// 	height: 160px;
+			// 	background-size: 160px;
+			// 	background-color: rgba(palette(slate,200),0.2);
+			// 	background-blend-mode: multiply;
+			// 	border-radius: 50%;
+			// }
+		}
+
+
+		img {
+			width: 8rem;
+			height: 8rem;
+			// max-width: 62%;
+			// height: auto;
+			border-radius: 50%;
+		}
+
+		@include e(bio) {
+			flex: 1;
+			margin-bottom: 1.5rem;
+			h4 {
+				color: palette();
+				margin: .5rem 0 1rem;
+				font-family: ff(body);
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			p {
+				margin: 0;
+				color: palette(grey,400);
+				line-height: 1.42857;
+				font-size: .7rem;
+			}
+		}
+
+		@include e(networks) {
+			align-self: flex-end;
+			width: 100%;
+			a {
+				width: 2.5rem;
+				height: 2.5rem;
+				display: inline-block;
+				position: relative;
+				border-radius: 50%;
+				transition: all .2s $transition;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: -.5rem;
+					left: -.5rem;
+					width: 3.5rem;
+					height: 3.5rem;
+					border: 2px solid palette();
+					border-radius: 50%;
+					opacity: 0;
+					animation-iteration-count: 1;
+					z-index: -1
+				}
+
+				&:hover {
+					&::before {
+						animation: pulsate .5s forwards ease-out;
+					}
+				}
+
+
+				&:not(:first-child) {
+					margin-left: 1rem;
+				}
+
+				&.social-twitter {
+					background: map-get($social, twitter);
+					&:hover {
+						background: palette();
+					}
+				}
+				&.social-github {
+					background: map-get($social, github);
+					&:hover {
+						background: palette();
+					}
+				}
+				&.social-globe {
+					background: map-get($social, globe);
+					&:hover {
+						background: palette();
+					}
+				}
+
+				.icon {
+					width: 1.1rem;
+					height: 1.1rem;
+					fill: #fff;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					// top: .7rem;
+					// position: relative;
+
+				}
+			}
+		}
+	} // person
+}
+
+@include b(locations) {
+	margin-top: 1rem;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2rem;
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 4rem;
+	}
+
+	@include e(title) {
+		margin-bottom: 2rem;
+	}
+
+	@include e(map) {
+		max-width: 100%;
+		height: auto;
+		width: 100%;
+	}
+	@include e(map-wrap) {
+		position: relative;
+		display: block;
+		max-width: 50rem;
+		margin: 0 auto;
+	}
+
+	@include e(marker) {
+		width: 1.1rem;
+		height: 1.1rem;
+		background-color: palette();
+		border-radius: 50%;
+		position: absolute;
+		display: inline-block;
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -.5rem;
+			left: -.5rem;
+			width: 2.1rem;
+			height: 2.1rem;
+			border: 2px solid palette();
+			border-radius: 50%;
+			opacity: 0;
+			animation: pulsate 2s ease-out;
+			animation-iteration-count: infinite;
+			//z-index: -1
+		}
+
+		@include m(la) {
+			top: 43%;
+			left: 13%;
+		}
+		@include m(ny) {
+			top: 33%;
+			left: 28%;
+		}
+		@include m(london) {
+			top: 29.5%;
+			left: 45.25%;
+		}
+
+	} // marker
+
+} // map
+
+
+
+@include b(careers) {
+	background-color: palette(grey,900);
+	text-align: center;
+	padding: 3rem 5%;
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include e(title) {
+		margin-bottom: .5rem;
+	}
+	@include e(intro) {
+		max-width: $max-width;
+		margin: 0 auto 2rem;
+		line-height: 1.428571;
+		letter-spacing: .025rem;
+	}
+
+	@include e(listings) {
+		border-top: 1px solid palette(grey,800);
+		border-bottom: 1px solid palette(grey,800);
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+}
+
+@include b(career) {
+	display: block;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	color: palette(grey,400);
+	text-align: left;
+	padding: 1.25rem 5%;
+
+	@include bp(md) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 1.25rem $column-width;
+	}
+
+	&:not(:first-child) {
+		border-top: 1px solid palette(grey,800);;
+	}
+
+	@include e(title) {
+		font-size: .9rem;
+		line-height: 1.1;
+		letter-spacing: .025rem;
+		margin-bottom: .5rem;
+
+		@include bp(md) {
+			margin-bottom: 0;
+		}
+
+		span {
+			display: inline-block;
+			transition: padding .25s $transition;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: palette();
+		.career__title span {
+			padding-left: .5rem;
+		}
+	}
+}
+
+
+@include b(about-giving) {
+	color: palette(grey,400);
+	max-width: $max-width;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@include e(graphic) {
+		background: palette() url(/assets/images/about-giving-back.jpg) no-repeat center center;
+		background-size: cover;
+		position: relative;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		//flex: 0 0 100%;
+		//max-width: 100%;
+
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+
+		@include bp(lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		h2 {
+			margin-bottom: .5rem;
+			text-align: center;
+			max-width: 90%;
+			@include bp(md) {
+				max-width: 66.666667%;
+			}
+		}
+		p {
+			margin: 0;
+			text-align: center;
+			font-size: .9rem;
+			line-height: 1.4444;
+			max-width: 90%;
+			@include bp(md) {
+				max-width: 66.666667%;
+			}
+		}
+	}
+
+	@include e(description) {
+		padding: 2rem 5%;
+		//flex: 0 0 100%;
+		//max-width: 100%;
+
+		@include bp(lg) {
+			padding: 2rem 0 2rem ($half-gutter + $column-width);
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+
+	@include m(back) {
+		display: flex;
+		flex-direction: column;
+		@include bp(lg) {
+			flex-direction: row;
+		}
+	}
+
+	@include m(charity) {
+		display: flex;
+		flex-direction: column;
+		@include bp(lg) {
+			flex-direction: row;
+		}
+		@include e(graphic) {
+			background-image: url(/assets/images/about-giving-charity.jpg);
+
+			@include bp(lg) {
+				order: 2;
+			}
+		}
+		@include e(description) {
+			order: 2;
+			@include bp(lg) {
+				padding: 2rem ($half-gutter + $column-width) 2rem 0;
+			}
+		}
+	}
+} // about giving
+
+
+
+@keyframes pulsate {
+	0% {
+		opacity: 0;
+		transform: scale(0.4, 0.4)
+	}
+
+	50% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1.2, 1.2)
+	}
+}

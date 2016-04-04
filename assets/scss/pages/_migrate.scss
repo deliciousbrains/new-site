@@ -1,0 +1,137 @@
+@include b(how-it-works) {
+	background: linear-gradient(to bottom right, #e3ebed, #ededed);
+	position: relative;
+	padding-top: 4rem;
+
+	// background-repeat: no-repeat;
+	// background-position: 100% 100%;
+	// background-size: 49%;
+
+	// @include bp(max 900px) {
+	// 	background-image: none !important;
+	// }
+
+	.container {
+		//flex-direction: column;
+	}
+
+	h2 {
+		text-align: center;
+		flex: 0 0 100%;
+		margin-bottom: 3rem;
+
+		@include section-title;
+	}
+
+	@include b(accordion) {
+
+		@include bp(md) {
+			width: 50% + $half-gutter;
+		}
+
+		// @include bp(lg) {
+		// 	width: 50% + $half-gutter;
+		// }
+
+		@include e(title) {
+			padding-right: $gutter-width*2;
+		}
+		@include e(content) {
+			padding-right: $gutter-width*2;
+		}
+
+		.btn {
+			margin-top: 2rem;
+		}
+	}
+}
+
+@include b(features) {
+	max-width: $max-width;
+	//width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 4rem 5% 3rem;
+	justify-content: center;
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	h2 {
+		text-align: center;
+		flex: 0 0 100%;
+		margin-bottom: 3rem;
+
+		@include section-title;
+	}
+
+	.btn {
+		//margin-left: 33.3333%;
+		//width: 34%;
+		@include bp(lg) {
+			margin: 0 auto;
+			//width: auto;
+		}
+	}
+
+
+}
+
+@include b(feature) {
+	text-align: center;
+	color: palette(grey,400);
+	padding-left: $half-gutter;
+	padding-right: $half-gutter;
+	margin-bottom: 2rem;
+	flex: 0 0 50%;
+	max-width: 50%;
+
+	@include bp(md) {
+		flex: 0 0 33.333%;
+		max-width: 33.333%;
+	}
+	@include bp(lg) {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	@include b(icon) {
+		width: 1.75rem;
+		height: 1.75rem;
+		fill: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		vertical-align: middle;
+
+		&.icon-speedometer {
+			top: 43%;
+			width: 2rem;
+			height: 2rem;
+		}
+
+
+		@include e(wrap) {
+			background: palette(grey);
+			border-radius: 50%;
+			display: inline-block;
+			width: 3.25rem;
+			height: 3.25rem;
+			position: relative;
+			margin-bottom: .5rem;
+		}
+	}
+
+	@include e(title) {
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+}

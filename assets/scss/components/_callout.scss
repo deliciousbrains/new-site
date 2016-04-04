@@ -1,0 +1,46 @@
+@include b(callout) {
+	background: url(/assets/images/bg-callout.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+
+	@include e(content) {
+		position: relative;
+		z-index: 10;
+		padding: 4rem 5%;
+		text-align: center;
+
+		@include bp(md) {
+			left: 50%;
+			width: 100%;
+			max-width: $max-width;
+			transform: translateX(-50%);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	@include e(message) {
+		text-transform: none;
+		line-height: 1.2;
+		letter-spacing: .025rem;
+		width: 100%;
+		text-align: center;
+
+		@include bp(md) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding-right: $column-width/2;
+			text-align: right;
+		}
+	}
+
+	h1.callout__message {
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,74 @@
+/*!
+Theme Name: JTD Base Theme
+Theme URI: n/a
+Author: Jacob Dubail
+Author URI: http://jacobdubail.com/
+Description:
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700);
+
+@import
+	'utils/functions',
+	'utils/variables',
+	'utils/mixins',
+	'utils/placeholders';
+
+@import
+	'vendors/mappy';
+
+@import
+	'base/reset',
+	'base/headings',
+	'base/typography',
+	'base/inputs',
+	'base/lists';
+
+@import
+	'layout/navigation',
+	'layout/header',
+	'layout/plugins',
+	'layout/forms',
+	'layout/footer';
+	//'layout/grid',
+
+@import
+	'components/buttons',
+	'components/accordion',
+	'components/callout',
+	'components/well',
+	'components/pagination',
+	'components/tooltip',
+	'components/related',
+	'components/media';
+
+@import
+	'vendors/owl',
+	'vendors/lity',
+	'vendors/tablesaw';
+	//'vendors/slick';
+
+@import
+	'pages/home',
+	'pages/about',
+	'pages/contact',
+	'pages/affiliate',
+	'pages/migrate',
+	'pages/offload',
+	'pages/faq',
+	'pages/documentation',
+	'pages/buzz',
+	'pages/pricing',
+	'pages/jobs',
+	'pages/blog';
+
+@import
+	'themes/site';
+
+//@import 'base/debug';
+
+@import
+	'base/print';

@@ -1,0 +1,37 @@
+@include b(affiliates) {
+	max-width: $narrow-max-width;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	.intro + p > span {
+		color: palette(grey);
+		margin-left: .5rem;
+		font-size: .8rem;
+	}
+}
+
+.spacer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.btn {
+		margin: 0;
+	}
+}
+
+@include b(faq) {
+	@include e(question) {
+		font-weight: bold;
+		margin: 0;
+		color: palette(grey,200);
+		line-height: 1.7;
+	}
+	@include b(answer) {
+		color: palette(grey,200);
+		line-height: 1.7;
+	}
+}

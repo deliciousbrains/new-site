@@ -1,0 +1,48 @@
+h1,h2,h3,
+h4,h5,h6 {
+	font-family: ff(headings);
+	margin: 0;
+	font-weight: 400;
+	font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+	a {
+		text-decoration: none;
+	}
+}
+h1 {
+	font-size: 1.8rem;
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 300;
+	//color: palette();
+	letter-spacing: .05rem;
+}
+h2 {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin: 0 0 .75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+}
+h3 {
+	font-size: .9rem;
+	line-height: 2;
+	margin: 0;
+	letter-spacing: .05rem;
+}
+h4 {
+	font-size: 0.9rem;
+	line-height: 2;
+	margin: 0;
+}
+h5 {
+	font-size: 0.7rem;
+	line-height: 2.558;
+	margin: 0;
+}
+h6 {
+	font-size: 0.6842rem;
+	text-transform: uppercase;
+	line-height: 1.57;
+	margin: 0;
+}

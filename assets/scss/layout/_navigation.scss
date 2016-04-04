@@ -1,0 +1,393 @@
+@include b(site) {
+	@include e(nav) {
+
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		width: 60%;
+		transform: translateX(-100%);
+		transition: all .5s $transition;
+		background-color: #3e4951;
+		z-index: 1000;
+		//min-height: 75vh;
+
+		&.opened {
+			@include bp(max md) {
+				transform: translateX(0);
+			}
+		}
+
+		@include bp(md) {
+			position: relative !important;
+			text-align: center;
+			width: 100%;
+			transform: none;
+			background-color: transparent;
+			min-height: 0;
+		}
+
+		.icon-logo {
+			width: 1.4rem;
+			height: 1.55rem;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+			margin: 0 .5rem;
+			fill: palette();
+		}
+
+		@include m(faded) {
+			@include bp(md) {
+				.menu__item:not(.menu__item--logo) a {
+					opacity: 0.1;
+				}
+				&:hover {
+					.menu__item:not(.menu__item--logo) a {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	} // nav
+}
+
+@include b(menu) {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	max-width: $max-width;
+
+	@include e(item) {
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-right: .5rem;
+		border-bottom: 1px solid palette(grey,400);
+
+		@include bp(md) {
+			display: inline-block;
+			padding-right: 0;
+			border-bottom: 0;
+		}
+
+		a {
+			font-size: .71rem;
+			display: block;
+			line-height: 2.5rem;
+			margin: 0 .5rem;
+			color: #fff;
+			text-transform: uppercase;
+			font-family: ff(headings);
+			letter-spacing: .025rem;
+			transition: all .2s $transition;
+
+			&:hover {
+				text-decoration: none;
+				color: palette();
+			}
+		} // a
+
+		@include m(logo) {
+			display: none;
+			@include bp(md) {
+				display: inline-block;
+			}
+		}
+
+		&.current-page-item > a {
+			color: palette();
+		}
+
+		@include m(account) {
+			@include bp(md) {
+				position: absolute;
+				right: 5%;
+			}
+			@include bp(lg) {
+				right: auto;
+				left: 100%;
+			}
+		}
+
+		@include m(button) {
+			margin-right: auto;
+
+			@include bp(md) {
+				margin-right: 0;
+				margin-left: auto;
+			}
+			a {
+				line-height: 1;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+
+		@include m(product) {
+			display: none;
+
+			@include bp(md) {
+				display: inline-block;
+			}
+
+			a {
+				line-height: 1;
+			}
+			.icon {
+				fill: #fff;
+				width: 2.5rem;
+				height: 2.5rem;
+				transition: fill .2s $transition;
+				&:hover {
+					fill: palette();
+				}
+			}
+		}
+
+		&.open .nav-arrow {
+			transform: rotate(180deg);
+			// margin-right: auto;
+			// margin-left: 0;
+			// padding-left: .5rem;
+			// padding-right: 0;
+		}
+	} // item
+
+	.nav-arrow {
+		padding: 0;
+		display: inline-block;
+		color: #fff;
+		transition: transform .2s ease;
+		margin-left: auto;
+		vertical-align: middle;
+		cursor: pointer;
+
+		svg {
+			fill: currentColor;
+			width: .85rem;
+			height: .85rem;
+			vertical-align: middle;
+			pointer-events: none;
+		}
+
+		&:hover {
+			color: palette();
+			svg {
+				fill: palette();
+			}
+		}
+
+		@include bp(md) {
+			display: none;
+		}
+	}
+
+
+	@include m(product) {
+		position: relative;
+		left: 50%;
+		width: 100%;
+		max-width: $max-width;
+		transform: translateX(-50%);
+		//display: flex;
+		padding: 2rem 5%;
+		margin-left: 0;
+		flex-direction: column;
+		z-index: 1000;
+		transition: all .2s $transition;
+		order: 2;
+		display: none;
+
+		.plugin-intro & {
+			display: flex;
+		}
+
+		&::before,&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: -1px;
+			background: rgba(black,0.8);
+			left: 100%;
+			width: 99rem;
+			border-bottom: 1px solid palette(slate,300);
+			opacity: 0;
+			visibility: hidden;
+			transition: all .2s $transition;
+		}
+		&::after {
+			left: auto;
+			right: 100%;
+		}
+
+		@include bp(md) {
+			display: flex;
+			position: absolute;
+			top: 2.5rem;
+			flex-direction: row;
+			align-items: center;
+			border-bottom: 1px solid palette(slate,300);
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+
+			&.sticky {
+				position: fixed;
+				top: 0;
+				background-color: rgba(black,0.8);
+				padding-top: .5rem;
+				padding-bottom: .5rem;
+				&::before,&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		@include bp(lg) {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.menu__item {
+			//border-bottom: 0;
+			a {
+				white-space: nowrap;
+			}
+		}
+
+		.menu__item--button {
+			display: none;
+			@include bp(lg) {
+				display: inline-block;
+			}
+		}
+
+		// li {
+		// 	display: block;
+		// 	@include bp(md) {
+		// 		display: inline-block;
+		// 	}
+		// }
+	}
+
+	@include b(sub-menu) {
+		display: none;
+		padding-left: 1rem;
+		margin-bottom: .5rem;
+
+		&.open {
+			display: block;
+			@include bp(md) {
+				display: none;
+			}
+		}
+
+		li {
+			border: 0;
+		}
+
+		a {
+			display: block;
+			text-transform: capitalize;
+			line-height: 1.2;
+			padding: .25rem;
+			margin: 0;
+		}
+
+	}
+
+
+} // menu
+
+
+
+
+.site__header .nav-toggle {
+	order: 1;
+	margin: 0;
+	padding: .125rem 0 .125rem 5%;
+	background-color: transparent;
+	border: 1px solid transparent;
+	display: inline-block;
+	z-index: 100;
+	cursor: pointer;
+	//width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2rem;
+	position: relative;
+	vertical-align: middle;
+	text-transform: uppercase;
+	color: #fff;
+	white-space: nowrap;
+
+
+	.icon {
+		width: 2rem;
+		height: 2rem;
+		fill: #fff;
+		vertical-align: middle;
+	}
+
+	span {
+		vertical-align: middle;
+	}
+
+	@include bp(md) {
+		display: none;
+	}
+}
+
+
+
+
+.nav-collapse ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.js .nav-collapse {
+  //clip: rect(0 0 0 0);
+  //max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+html.js .nav-collapse.opened {
+  max-height: 9999px !important;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+@include bp(sm) {
+  .js .nav-collapse {
+    position: relative;
+    clip: none;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+    position: relative;
+    overflow: visible;
+  }
+}

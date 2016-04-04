@@ -1,0 +1,118 @@
+@include b(container) {
+	// Set container width if responsive
+	max-width: $width;
+
+	padding: 0 5%;
+	@include mappy-bp(xl) {
+		padding: 0;
+	}
+	margin: 0 auto;
+	@extend %cf;
+
+
+	@include m(relative) {
+		position: relative;
+	}
+
+}
+
+@include b(row) {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: -$gutp/2;
+	margin-left: -$gutp/2;
+
+}
+
+.col {
+	flex-direction: column;
+	display: flex;
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+
+
+[class*=col--] {
+	flex: 0 1 auto;
+	padding-right: $gutp;
+	padding-left: $gutp;
+}
+
+
+
+
+
+@for $i from 1 through length($columnpoints) {
+	$keys : map-keys($columnpoints);
+	$vals : map-values($columnpoints);
+	$size : nth( $keys, $i );
+	$bp   : nth( $vals, $i );
+
+
+	@include mappy-bp( $bp ) {
+		@include make-grid($columns, $size);
+
+		.col-#{$size} {
+			flex-grow: 1;
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		.start-#{$size} {
+			justify-content: flex-start;
+			text-align: start;
+		}
+
+		.center-#{$size} {
+			justify-content: center;
+			text-align: center;
+		}
+
+		.end-#{$size} {
+			justify-content: flex-end;
+			text-align: end;
+			.no-flexbox & {
+				text-align: right;
+			}
+		}
+
+		.top-#{$size} {
+			align-items: flex-start;
+		}
+
+		.middle-#{$size} {
+			align-items: center;
+		}
+
+		.bottom-#{$size} {
+			align-items: flex-end;
+		}
+
+		.around-#{$size} {
+			justify-content: space-around;
+		}
+
+		.between-#{$size} {
+			justify-content: space-between;
+			.no-flexbox & > * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.first-#{$size} {
+			order: -1;
+		}
+
+		.last-#{$size} {
+			order: 1;
+			.no-flexbox & {
+				float: right;
+			}
+		}
+	}
+}

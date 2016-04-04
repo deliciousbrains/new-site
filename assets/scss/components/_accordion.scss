@@ -1,0 +1,75 @@
+@include b(accordion) {
+	position: relative;
+	padding-bottom: 4rem;
+
+	@include e(title) {
+		text-transform: uppercase;
+		cursor: pointer;
+		border-bottom: 1px solid palette(grey,700);
+		line-height: 1.333;
+		font-weight: 700;
+		padding-bottom: 1rem;
+		transition: all .2s $transition;
+		position: relative;
+		margin-top: 1rem;
+
+		&::after {
+			content: '+';
+			font-weight: 100;
+			font-size: 1.4rem;
+			position: absolute;
+			top: 0;
+			line-height: 1rem;
+			right: 5px;
+			@include bp(1220px) {
+				right: $gutter-width*2;
+			}
+		}
+
+		&.open {
+			border-bottom-color: transparent;
+			padding-bottom: .5rem;
+			&::after {
+				content: '-';
+				//line-height: .9rem;
+			}
+		}
+
+	}
+
+	@include e(content) {
+		max-height: 0;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all .2s $transition;
+		color: palette(grey,400);
+		line-height: 1.71;
+
+		p {
+			margin: 0;
+		}
+
+		&.open {
+			visibility: visible;
+			max-height: 400px;
+			padding-bottom: 1rem;
+			//margin-bottom: 1rem;
+			border-bottom: 1px solid palette(grey,700);
+		}
+	}
+
+	@include e(image) {
+		position: absolute;
+		//left: 100%;
+		right: 0;
+		bottom: 0;
+		display: none;
+		max-width: 50% - $half-gutter;
+		@include bp(md) {
+			display: block;
+		}
+	}
+
+
+
+}

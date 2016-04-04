@@ -1,0 +1,44 @@
+@include b(job-listing) {
+
+	max-width: $max-width;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-top: 4rem;
+	padding-right: $column-width*2 - $gutter-width;
+
+	line-height: 1.714;
+
+	@include e(intro) {
+		margin-left: $column-width*2 + $gutter-width*2;
+		margin-bottom: 1.5rem;
+		padding-bottom: .5rem;
+		border-bottom: 1px solid palette(grey,700);
+
+		.about__person--blend {
+			position: absolute;
+			top: 0;
+			left: 0;
+			> span {
+				width: 5.5rem;
+				height: 5.5rem;
+				background-size: 5.5rem;
+			}
+		}
+
+	} // intro
+
+	@include e(description) {
+		margin-left: $column-width*2 + $gutter-width*2;
+		margin-bottom: 2rem;
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+
+}

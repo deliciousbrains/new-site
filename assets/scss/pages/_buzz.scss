@@ -1,0 +1,165 @@
+@include b(buzz) {
+	@include e(tweet) {
+		position: relative;
+		z-index: 10;
+		padding: 3.5rem 5% 4rem;
+
+		@include bp(md) {
+			left: 50%;
+			width: 100%;
+			max-width: $max-width;
+			transform: translateX(-50%);
+			display: flex;
+			flex-direction: row;
+		}
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.owl-pagination {
+			justify-content: center;
+			bottom: 2.5rem;
+			.active {
+				background-color: palette();
+			}
+		}
+	} // tweet
+
+	@include e(interviews) {
+		background: linear-gradient(to bottom right, #e3ebed, #ededed);
+		position: relative;
+		justify-content: center;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		padding: 4rem 5%;
+
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		h2 {
+			flex: 0 0 100%;
+			margin-bottom: 3rem;
+
+			@include section-title;
+		}
+	} // interviews
+
+	@include e(interview) {
+		padding: 0 $half-gutter 2rem;
+		position: relative;
+		display: block;
+		flex: 0 0 100%;
+
+		@include bp(md) {
+			flex: 0 0 33.333%;
+			max-width: 33.333%;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		@include e(icon) {
+			position: absolute;
+			background-color: rgba(black,0.25);
+			border-radius: 50%;
+			width: 5.5rem;
+			height: 5.5rem;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			transition: all .2s $transition;
+
+			.icon {
+				fill: #fff;
+				width: 2rem;
+				height: 2rem;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+
+		&:hover {
+			.buzz__interview__icon {
+				background: rgba(black,0.5);
+			}
+		}
+	} // interview
+
+	@include e(tweets) {
+		position: relative;
+		z-index: 10;
+		left: 50%;
+		width: 100%;
+		max-width: $max-width;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		padding: 4rem 5%;
+
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		h2 {
+			flex: 0 0 100%;
+			margin-bottom: 3rem;
+			text-align: center;
+
+			@include section-title;
+		}
+
+		@include b(media) {
+			margin: 0 $half-gutter 1.5rem;
+			padding: .5rem 1rem 1rem;
+			border-color: palette(blue,700);
+			color: palette(grey,400);
+			flex: 0 0 100%;
+
+			@include bp(md) {
+				flex: 0 0 50% - $gutter-width;
+				max-width: 50% - $gutter-width;
+				margin: 0 $half-gutter 1.5rem;
+			}
+
+			@include bp(lg) {
+				flex: 0 0 33.3333% - $gutter-width;
+				max-width: 33.3333% - $gutter-width;
+				margin: 0 $half-gutter 1.5rem;
+			}
+
+			.icon-twitter {
+				top: 1rem;
+				fill: map-get($social, twitter);
+			}
+		}
+
+		@include e(more) {
+			display: block;
+			text-align: center;
+			font-size: 1.2rem;
+			font-family: ff(headings);
+			font-weight: 700;
+			text-transform: uppercase;
+			flex: 0 0 100%;
+			margin-bottom: 1.5rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+
+	} // tweets
+}

@@ -1,0 +1,70 @@
+@include b(well) {
+	background: palette(grey,900);
+	padding: 1rem;
+
+	&.fixed {
+		position: fixed;
+		bottom: 5rem;
+		right: 5px;
+		width: 15rem;
+		padding: 1rem;
+
+		// hack doesn't work. resorting to JS to append div to another element.
+		//transform: translateZ(0); // hack to fix the fixed bug
+		// http://stackoverflow.com/questions/2637058/positions-fixed-doesnt-work-when-using-webkit-transform/15251226#15251226
+
+		.well__title {
+			line-height: 1.2;
+			margin-bottom: .5rem;
+		}
+	}
+
+	@include e(close) {
+		//color: #fff !important;
+		position: absolute;
+		top: 3px;
+		right: 2px;
+		//padding: .5rem;
+		background-color: #fff;
+		text-align: center;
+		width: 1rem;
+		height: 1rem;
+		line-height: 1rem;
+		display: inline-block;
+		border-top-right-radius: 2px;
+		.icon {
+			fill: palette();
+			width: .5rem;
+			height: .5rem;
+		}
+		&:hover {
+			background-color: palette(grey,700);
+		}
+
+	}
+
+	@include m(danger) {
+		width: 100%;
+		background: palette();
+		color: #fff;
+		border-radius: .15rem;
+		padding: 1rem 12.5%;
+
+		@include e(title) {
+			color: #fff;
+			font-family: ff(body);
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-bottom: .75rem;
+		}
+	}
+
+	@include e(title) {
+		color: palette(grey,500);
+		margin-bottom: .75rem;
+		// font-size: .9rem;
+		letter-spacing: .025rem;
+	}
+}

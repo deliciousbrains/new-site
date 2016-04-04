@@ -1,0 +1,9 @@
+a, a:visited { 
+	color: $linkcolor; 
+	&:hover   { 
+		color: $linkcolorhover; 
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+}

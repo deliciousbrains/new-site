@@ -1,0 +1,93 @@
+@include b(faq) {
+	position: relative;
+	z-index: 10;
+	padding-left: 5%;
+	padding-right: 5%;
+
+	@include bp(md) {
+		left: 50%;
+		width: 100%;
+		max-width: $max-width;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include e(categories) {
+		padding-top: 3.25rem;
+		padding-right: 1rem;
+		width: 100%;
+
+		@include bp(md) {
+			flex: 0 0 $column-width*4 - $half-gutter;
+			max-width: $column-width*4 - $half-gutter;
+			border-right: 1px solid palette(grey,700);
+			text-align: right;
+		}
+
+		h5 {
+			text-transform: uppercase;
+			margin-bottom: .75rem;
+			line-height: 1.42857;
+		}
+	}
+	a.faq__category {
+		display: block;
+		font-size: .9rem;
+		margin-bottom: .75rem;
+		color: palette(slate,600);
+		&:hover {
+			color: palette();
+		}
+	}
+
+	@include e(sections) {
+		width: 100%;
+		@include bp(md) {
+			flex: 0 0 $column-width*8 + $half-gutter;
+			max-width: $column-width*8 + $half-gutter;
+			padding-left: $gutter-width;
+		}
+
+		@include b(well) {
+			margin-top: 2.25rem;
+			margin-bottom: 2.25rem;
+		}
+	}
+	@include e(section) {
+		padding-top: 3.25rem;
+
+		@include e(title) {
+			font-weight: 400;
+		}
+
+		hr {
+			margin-top: 2.5rem;
+			margin-bottom: 0;
+		}
+
+		.back_to_top {
+			display: block;
+			text-align: right;
+			text-transform: uppercase;
+			font-size: .6rem;
+			font-weight: 700;
+			padding-top: .25rem;
+		}
+
+	}
+
+	@include e(question) {
+		color: palette(grey,400);
+	}
+	@include e(answer) {
+		color: palette(grey,400);
+		margin-bottom: 1.5rem;
+	}
+}

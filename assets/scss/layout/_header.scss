@@ -1,0 +1,161 @@
+@include b(site) {
+	@include e(header) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(palette(grey,100), 0.8);
+		height: 2.5rem;
+		z-index: 1000;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include m(blank) {
+			background-color: transparent;
+		}
+
+		.icon-logo {
+			width: 1.4rem;
+			height: 1.55rem;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+			margin: 0 .5rem;
+			fill: palette();
+		}
+	} // header
+
+	@include e(mobile-links) {
+		margin-left: auto;
+		order: 2;
+		line-height: 2.5rem;
+		padding-right: 5%;
+		text-transform: uppercase;
+
+		a {
+			color: #fff;
+			&:first-child {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		@include bp(md) {
+			display: none;
+		}
+	}
+}
+
+
+@include b(page-header) {
+	background: url(../images/bg_header.jpg) no-repeat center center palette(grey,000);
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	padding: 4.75rem 5% 2.5rem;
+
+	@include bp(lg) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include m(blog) {
+		.page-title {
+			text-transform: capitalize;
+			font-weight: 400;
+			margin-bottom: .25rem;
+			line-height: 1.2;
+			+ time {
+				font-weight: 100;
+				font-family: ff(headings);
+			}
+		}
+	}
+
+	@include m(migrate) {
+		color: palette(blue);
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+
+		@include bp(md) {
+			padding-top: 7.5rem;
+		}
+
+		.welcome__stars {
+			margin-left: 1.5rem;
+			padding-right: 0;
+			width: auto;
+			text-align: center;
+			display: block;
+
+			@include bp(md) {
+				text-align: right;
+				display: inline-block;
+			}
+			.icon {
+				margin-left: 0;
+				fill: palette(blue);
+			}
+		}
+
+		.page-title {
+			margin-top: 2rem;
+		}
+
+	} // migrate
+
+	@include m(offload) {
+		color: palette(green);
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+
+		@include bp(md) {
+			padding-top: 7.5rem;
+		}
+
+		.welcome__stars {
+			margin-left: 1.5rem;
+			padding-right: 0;
+			width: auto;
+			text-align: center;
+			display: block;
+
+			@include bp(md) {
+				text-align: right;
+				display: inline-block;
+			}
+			.icon {
+				margin-left: 0;
+				fill: palette(green);
+			}
+		}
+
+		.page-title {
+			margin-top: 2rem;
+			+ h2 {
+				font-weight: 700;
+				color: #fff;
+				margin-top: 2.25rem;
+			}
+		}
+
+	} // migrate
+
+	@include m(pricing) {
+		background-image: url(/assets/images/bg-migrate.jpg);
+	} // pricing
+}
+
+.page-title {
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	line-height: 1;
+	letter-spacing: .05rem;
+	font-weight: 400;
+}
+
+.page-subtitle {
+	font-size: .8rem;
+	line-height: 1.3;
+	margin-bottom: 0;
+}

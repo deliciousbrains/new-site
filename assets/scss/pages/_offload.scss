@@ -1,0 +1,88 @@
+@include b(figure-right) {
+	position: relative;
+	z-index: 100;
+	flex: 0 0 100%;
+	max-width: 100%;
+
+	padding: 2.5rem 0;
+
+	@include bp(md) {
+		padding: 0;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	h2 {
+		color: #fff;
+		text-align: center;
+
+		.icon {
+			fill: currentColor;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+
+@include b(addon) {
+	position: relative;
+	margin: 0 $half-gutter 1rem;
+	//margin-bottom: 2.5rem;
+	flex: 0 0 50%-$gutter-width;
+	max-width: 50%-$gutter-width;
+	text-align: center;
+	padding: 1.5rem;
+
+	@include bp(sm) {
+		flex: 0 0 33.333%-$gutter-width;
+		max-width: 33.333%-$gutter-width;
+	}
+
+	@include bp(md) {
+		flex: 0 0 20%-$gutter-width;
+		max-width: 20%-$gutter-width;
+	}
+
+	h5 {
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.42;
+		letter-spacing: .015rem;
+		margin-top: .5rem;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: none;
+	}
+
+	&:nth-of-type(1) {
+		background-color: #a46497;
+	}
+	&:nth-of-type(2) {
+		background-color: #1d2428;
+	}
+	&:nth-of-type(3) {
+		background-color: #277f91;
+	}
+	&:nth-of-type(4) {
+		background-color: #33cc66;
+	}
+	&:nth-of-type(5) {
+		background-color: #03b0d8;
+	}
+
+	.icon {
+		fill: #fff;
+		width: 3rem;
+		height: 3rem;
+	}
+
+	& + .btn {
+		margin-top: 1.5rem;
+	}
+}

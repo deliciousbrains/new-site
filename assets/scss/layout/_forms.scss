@@ -1,0 +1,25 @@
+.form-group {
+	display: flex;
+	justify-content: stretch;
+
+	flex-direction: column;
+
+	@include bp(md) {
+		flex-direction: row;
+	}
+
+	label {
+		align-self: center;
+		text-transform: uppercase;
+		color: palette(grey,400);
+		font-size: .65rem;
+		letter-spacing: .025rem;
+		margin-bottom: .5rem;
+
+		@include bp(md) {
+			margin-right: 1rem;
+			margin-bottom: 0;
+		}
+	}
+	//align-items: center;
+}

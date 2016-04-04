@@ -1,0 +1,131 @@
+// Set Grid (1170gs default)
+$column-width: 70px;
+$gutter: 30px;
+$columns: 12;
+
+$max-width: ($column-width * $columns) + ($gutter * ($columns - 1));
+
+$narrow-max-width: 750px;
+
+
+$transition: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+
+$column-width: 8.333%;
+$gutter-width: 2.564102564102564%;//1.5873%;
+$column-minus-gutter: 5.982905982905983%;
+$gutter-width-px: 30px;
+
+$two-column: $column-width*2;
+$half-gutter: $gutter-width/2;
+
+
+$elementSeparator: '__';
+$modifierSeparator: '--';
+
+
+$fonts: (
+	nav : "Lato, sans-serif",
+	body : "Lato, sans-serif",
+	headings : "brandon-grotesque,sans-serif",
+);
+
+/*
+	300,400,700
+*/
+
+
+// $columnpoints: (
+// 	'xs': max 500px,
+// 	'sm': 500px,
+// 	'md': 768px,
+// 	'mx': 900px,
+// 	'lg': 1170px,
+// 	'xl': 1400px,
+// );
+
+$breakpoints: (
+	'sm': 500px,
+	'md': 768px,
+	'mx': 900px,
+	'lg': 1024px,
+	'xl': 1340px,
+);
+
+
+$rootsizes: (
+  rootsize-0: 18,
+  rootsize-1: 19,
+  rootsize-2: 18,
+  rootsize-3: 19,
+  rootsize-4: 20
+);
+
+$points: map-keys($breakpoints);
+$sizes: map-values($rootsizes);
+
+
+$palettes: (
+	brand: (
+		200: #951c41,
+		500: #ee3b71,
+		800: #fad3e1
+	),
+	error: (
+		500: #ff0000,
+	),
+	grey: (
+		000: #1e2022,
+		100: #252728,
+		200: #333333,
+		400: #777777,
+		500: #909aa3,
+		600: #adacad,
+		700: #cbd3db,
+		800: #ebebeb,
+		900: #f8f8f8
+	),
+	blue: (
+		200: #bfc8ca,
+		500: #50c7e4,
+		700: #c2d0d4,
+		800: #d5effa,
+		900: #f2f7f8
+	),
+	green: (
+		500: #67bf75,
+		800: #e7f2dd
+	),
+	slate: (
+		200: #212326,
+		300: #374047,
+		400: #3c566d,
+		500: #4e5c67,
+		600: #454748,
+		700: #ebeff2,
+		800: #eff4f6,
+	)
+);
+
+
+//$palettes: generate-color-palette($palettes);
+
+
+$social: (
+	facebook : #0053a3,
+	twitter  : #0095d6,
+	linkedin : #4d83c3,
+	googplus : #dd4b39,
+	youtube  : #cd201f,
+	vimeo    : #aad450,
+	rss      : #ff9900,
+	flickr   : #0063dc,
+	yelp     : #af0606,
+	github   : #4e3d77,
+	globe    : #454f56,
+	instagram   : #517fa4,
+	pinterest   : #cb2027,
+	foursquare  : #F94877,
+	urbanspoon  : #CB202C,
+	tripadvisor : #589442,
+);

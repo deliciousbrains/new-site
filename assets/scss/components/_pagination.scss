@@ -1,0 +1,105 @@
+@include b(pagination) {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4rem 0 2.5rem;
+	font-size: .9rem;
+	text-transform: uppercase;
+	flex-direction: column;
+
+	@include bp(md) {
+		flex-direction: row;
+	}
+
+	@include e(prev) {
+		text-align: left;
+		align-self: flex-start;
+	}
+	@include e(next) {
+		text-align: right;
+		align-self: flex-end;
+	}
+	@include e(pages) {
+		@include bp(max md) {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	@include m(blog) {
+		//flex-direction: column;
+		margin: 2rem 0;
+		padding: 0 5%;
+
+		@include bp(md) {
+			max-width: $max-width;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 0;
+			//flex-direction: row;
+			margin: 4rem 0 2.5rem;
+		}
+		//flex-wrap: wrap;
+	}
+
+
+	a {
+		color: palette(grey);
+		&:hover {
+			color: palette(slate);
+		}
+
+		span {
+			vertical-align: middle;
+
+			& + .icon {
+				margin-left: .5rem;
+			}
+		}
+
+		.icon {
+			fill: currentColor;
+			width: .8rem;
+			height: .8rem;
+			vertical-align: middle;
+			& + span {
+				margin-left: .5rem;
+			}
+		}
+	}
+
+
+	@include e(page) {
+		width: 2rem;
+		height: 2rem;
+		text-align: center;
+		line-height: 2rem;
+		display: inline-block;
+		border-radius: 50%;
+		margin: 0 .25rem;
+
+		&:hover {
+			background-color: palette(grey);
+			color: #fff;
+		}
+
+		&.active {
+			background-color: palette(slate);
+			color: #fff;
+		}
+	}
+
+	.docs & {
+		padding-left: 5%;
+		padding-right: 5%;
+		@include bp(lg) {
+			margin-left: $column-width*4 - $half-gutter;
+		}
+		@include bp(1220px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

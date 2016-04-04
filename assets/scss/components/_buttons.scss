@@ -1,0 +1,117 @@
+@include b(btn) {
+	//@include btn(palette(brand),#fff,palette(brand));
+	@extend %btn;
+	background-color: palette(grey);
+	color: #fff;
+	transition: all .2s $transition;
+
+	margin: 0 .25rem .25rem 0;
+
+	.form-group & {
+		margin: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.icon {
+		fill: currentColor;
+		width: 1rem;
+		height: 1rem;
+		vertical-align: top;
+		position: relative;
+		left: 1.25rem;
+	}
+
+	.icon-search {
+		left: 0;
+	}
+
+
+	@include m(lg) {
+		border-radius: .3rem .3rem .3rem .15rem;
+		font-size: .9rem;
+		padding: 1rem 2.75rem;
+	}
+
+	@include m(primary) {
+		background-color: palette(grey);
+	}
+
+	@include m(info) {
+		background-color: palette(blue);
+	}
+
+	@include m(success) {
+		background-color: palette(green);
+	}
+
+	@include m(danger) {
+		background-color: palette();
+	}
+
+	@include m(danger-dark) {
+		background-color: palette(brand,200);
+	}
+
+	@include m(outline) {
+		border-width: 2px;
+		border-style: solid;
+		background-color: transparent;
+	}
+
+	@include m(primary) {
+		//color: palette(grey);
+		border-color: palette(grey);
+
+		&.btn--outline {
+			color: palette(grey);
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: palette(grey);
+		}
+	}
+
+	@include m(info) {
+		border-color: palette(blue);
+
+		&.btn--outline {
+			color: palette(blue);
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: palette(blue);
+		}
+	}
+
+	@include m(success) {
+		//color: palette(green);
+		border-color: palette(green);
+
+		&.btn--outline {
+			color: palette(green);
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: palette(green);
+		}
+	}
+
+	@include m(danger) {
+		//color: palette();
+		border-color: palette();
+
+		&.btn--outline {
+			color: palette();
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: palette();
+		}
+	}
+
+}

@@ -1,0 +1,241 @@
+@mixin section-title {
+	position: relative;
+	padding-bottom: 2rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: .75rem;
+		width: 3.15rem;
+		height: .35rem;
+		background-color: palette(slate,300);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+
+
+@mixin iehack {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content;
+	}
+	.ie9 & {
+		@content;
+	}
+}
+
+
+@mixin b($block) {
+	.#{$block} {
+		@content;
+	}
+}
+
+@mixin e($element) {
+	$selector: &;
+	@if containsModifier($selector) {
+	$block: getBlock($selector);
+		@at-root {
+			#{$selector} {
+				#{$block+$elementSeparator+$element} {
+					@content;
+				}
+			}
+		}
+	} @else {
+		@at-root {
+			#{$selector+$elementSeparator+$element} {
+				@content;
+			}
+		}
+	}
+}
+
+@mixin m($modifier) {
+	@at-root {
+		#{&}#{$modifierSeparator+$modifier} {
+			@content;
+		}
+	}
+}
+
+
+
+@mixin center-align($dir: false) {
+	$map: (
+		top:  ( Y ),
+		left: ( X )
+	);
+
+	$val: map_get($map,$dir);
+
+	@if map_get($map, $dir) != null {
+		#{$dir}: 50%;
+		transform: translate#{$val}(-50%);//#{"translate#{$val}(-50%)"};
+	} @else {
+		transform: translate(-50%,-50%);
+		top: 50%;
+		left: 50%;
+	}
+}
+
+
+@mixin box($size: 2rem) {
+	width: $size;
+	height: $size;
+}
+
+
+
+
+/* GRID MIXINS */
+@mixin calc-grid($index, $class) {
+
+	$width: percentage(($index / $columns));
+
+	.col--#{$class}-#{$index} {
+		flex-basis: $width;
+		max-width: $width;
+		.no-flexbox & {
+			width: $width;
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	// .col-#{$class}-push-#{$index} {
+	// 	left: $width;
+	// }
+	// .col-#{$class}-pull-#{$index} {
+	// 	right: $width;
+	// }
+	.col-#{$class}-offset-#{$index} {
+		margin-left: $width;
+	}
+}
+
+@mixin make-grid($columns, $class) {
+	@for $i from 0 through $columns {
+		@include calc-grid($i, $class);
+	}
+}
+
+
+@mixin btn( $bg: transparent, $color: palette(brand), $hoverbg: inherit, $hovercolor: #fff ) {
+	@extend %btn;
+	background: $bg;
+	color: $color;
+
+	&:hover{
+		background: $hoverbg;
+		color: $hovercolor;
+	}
+
+}
+
+@mixin blendy($img, $color: null, $grad: null, $blend: multiply) {
+  $img-path: url('#{$img}');
+  @if $grad {
+    background: $grad, $img-path;
+  } @else {
+    background-image: $img-path;
+    background-color: $color;
+  }
+  background-blend-mode: $blend;
+}
+
+
+
+@function walk($list, $function, $args...) {
+	@if not function-exists($function) {
+	  @warn "There is no `#{$function}` function.";
+	  @return false;
+	}
+  @for $i from 1 through length($list) {
+    $list: set-nth($list, $i, call($function, nth($list, $i), $args...));
+  }
+
+  @return $list;
+}
+
+
+// mixin
+@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  			clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+ */

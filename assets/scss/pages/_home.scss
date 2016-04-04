@@ -1,0 +1,319 @@
+@include b(welcome) {
+	background: transparent url(../images/bg_welcome.jpg) center center no-repeat;
+	background-size: cover;
+
+
+
+	@include e(wrap) {
+
+		@include bp(md) {
+			max-width: $max-width;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			//flex-direction: column;
+			flex-direction: row;
+			min-height: 60vh;
+		}
+
+		@include bp(lg) {
+			min-height: 75vh;
+		}
+		@include bp(xl) {
+			min-height: 90vh;
+		}
+
+		@include bp(1700px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	@include e(stars) {
+		padding-right: $gutter-width;
+		//align-self: flex-end;
+		padding-bottom: .5rem;
+		width: 100%;
+		text-align: right;
+
+		@include bp(md) {
+			padding-bottom: 1.5rem;
+		}
+
+		.icon {
+			width: .7rem;
+			height: .7rem;
+			fill: palette(slate,600);
+			margin-left: .125rem;
+		}
+	}
+
+
+	@include e(brand) {
+		text-align: center;
+		padding: 2rem 5% 1rem;
+
+		@include bp(sm) {
+			padding-left: $half-gutter;
+			padding-right: $half-gutter;
+			align-self: center;
+			flex: 0 0 50%;
+		}
+
+		@include bp(md) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			text-align: left;
+
+			margin-top: -6rem;
+		}
+
+		@include e(message) {
+			position: relative;
+			color: palette();
+			padding-top: 1rem;
+			font-size: 1.4rem;
+
+			@include bp(sm) {
+				font-size: 1.6rem;
+			}
+
+			@include bp(md) {
+				padding-top: 0;
+				margin-left: $column-width;
+			}
+
+			@include bp(lg) {
+				font-size: 1.8rem;
+				margin-left: $two-column;
+			}
+
+			&::after {
+				content: '';
+				width: 3.3rem;
+				height: .35rem;
+				background-color: palette();
+				position: absolute;
+				bottom: -2rem;
+				left: 2px;
+				display: none;
+				@include bp(md) {
+					display: inline-block;
+				}
+			}
+
+			.icon {
+				display: block;
+				position: absolute;
+				top: -1.6rem;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 1.4rem;
+				height: 1.55rem;
+				fill: palette();
+
+				@include bp(md) {
+					margin-bottom: 4rem;
+					position: static;
+					width: 3.5rem;
+					height: 4.5rem;
+					transform: none;
+				}
+			}
+		}
+
+
+	} // brand
+
+	@include e(products) {
+		display: flex;
+		flex: 0 0 100%;
+		max-width: 100%;
+		position: relative;
+		background-color: rgba(#181a1e,0.2);
+
+		@include bp(md) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			// padding-left: 0;
+			// padding-right: 0;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			width: 99rem;
+			display: block;
+			background-color: rgba(#181a1e,0.2);
+		}
+
+		@include e(content) {
+			align-self: center;
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem $column-width 2rem;
+
+			@include bp(lg) {
+				margin-left: $column-width;
+				width: 100% - $column-width;
+				padding: 0 $column-width 0 0;
+			}
+
+			@include bp(xl) {
+				margin-left: $two-column + $gutter-width;
+				width: 100% - ($two-column + $gutter-width);
+				padding-right: 0;
+			}
+		}
+
+	} // products
+
+	@include e(product) {
+		color: #fff;
+		border-top: 1px solid rgba(palette(slate,300), .5);
+		padding-top: 1rem;
+		margin-top: 1rem;
+
+		@include bp(md) {
+			padding-top: 1.5rem;
+			margin-top: 3rem;
+		}
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		header {
+			display: flex;
+			margin-bottom: .75rem;
+			align-items: center;
+			//padding-left: 3rem;
+
+			//@include bp(md) {
+				padding-left: 2rem;
+			//}
+
+			@include bp(lg) {
+				padding-left: 3rem;
+				//padding-left: $column-width;
+				//padding-left: $column-width*3;
+			}
+
+			// h3 {
+			// 	font-size: .8rem;
+			// }
+
+			.btn {
+				color: #707070;
+				border-color: #707070;
+				margin: 0;
+				padding: .5rem;
+				font-size: .55rem;
+				//display: none;
+
+				@include bp(md) {
+					display: inline-block;
+					padding: .7rem 1rem;
+					font-size: .7rem;
+				}
+
+				&:hover {
+					color: #fff;
+					background-color: #707070;
+				}
+			}
+		}
+
+		@include e(title) {
+			flex: 1;
+			color: palette(blue,200);
+			position: relative;
+
+			$icon-width: 2rem;
+
+			.icon {
+				text-align: center;
+				position: absolute;
+				//width: $icon-width;
+				//height: $icon-width;
+				//left: calc( (#{$column-width} + #{$icon-width}) * -1 );
+				//left: -3rem;
+
+				//@include bp(md) {
+					width: $icon-width*.75;
+					height: $icon-width*.75;
+					left: -2rem;
+				//}
+
+				@include bp(lg) {
+					width: $icon-width;
+					height: $icon-width;
+					left: -3rem;
+				}
+
+				svg {
+					fill: #fff;
+					// width: $icon-width;
+					// height: $icon-width;
+
+					//@include bp(md) {
+						width: $icon-width*.75;
+						height: $icon-width*.75;
+					//}
+
+					@include bp(lg) {
+						width: $icon-width;
+						height: $icon-width;
+					}
+				}
+				img {
+					width: $icon-width;
+				}
+			}
+		}
+
+		@include e(reviews) {
+			font-size: .7rem;
+			line-height: 1.5;
+			margin-top: 1rem;
+			padding-left: 5%;
+			padding-right: 5%;
+
+			@include bp(md) {
+				margin-top: 0;
+				font-size: .6rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+			@include bp(lg) {
+				padding-left: 3rem;
+				padding-right: 3rem;
+			}
+
+			p {
+				letter-spacing: .025rem;
+			}
+
+			.owl-wrapper-outer {
+				width: 99.9%;
+			}
+			.owl-pagination {
+				bottom: 0rem;
+			}
+
+		}
+
+	}
+
+}
+
+
+#gridOverlay {
+	pointer-events: none;
+}

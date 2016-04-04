@@ -1,0 +1,91 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background: palette();
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: palette();
+	color: #fff;
+	text-shadow: none;
+}
+
+html {
+	min-height: 100%;
+	font-size: nth($sizes, 1) / 10 * 62.5%;
+	background-color: palette(slate,800);
+
+	// Loop through columnpoints.
+	@for $i from 2 through length($breakpoints) {
+	  @include bp(nth($points, $i)) {
+			font-size: nth($sizes, $i) / 10 * 62.5%;
+	  }
+	}
+}
+
+body {
+	font-family: ff('body');
+	font-size: .7rem;
+	line-height: 1.42857;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	color: palette(slate,600);
+	background-color: #fff;
+
+	// max-width: 1600px;
+	// margin: 0 auto;
+}
+
+
+html,body {
+	position: relative;
+	overflow-x: hidden;
+}
+
+
+a:not(.btn) {
+	text-decoration: none;
+	color: palette();
+}
+
+p {
+	margin: 0 0 1.5rem;
+
+	&.intro {
+		font-size: .9rem;
+		line-height: 1.4444;
+		color: palette(grey,400);
+	}
+}
+
+blockquote {
+	margin: 0;
+	p {
+		font-size: .9rem;
+		line-height: 1.2;
+		letter-spacing: .025rem;
+	}
+	cite {
+		font-style: normal;
+		font-size: .6rem;
+		line-height: 1.2;
+	}
+}
+
+hr {
+	background-color: palette(grey,700);
+	border: 0;
+	height: 1px;
+	margin: 1.5rem 0;
+}
+
+
+
+
