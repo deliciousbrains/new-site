@@ -53,6 +53,10 @@ html,body {
 a:not(.btn) {
 	text-decoration: none;
 	color: palette();
+	transition: all .2s $transition;
+	&:hover {
+		color: darken(palette(),15%);
+	}
 }
 
 p {

@@ -1,4 +1,4 @@
-<ul class="menu menu--product">
+<ul class="menu menu--product menu--offload">
 	<li class="menu__item menu__item--product">
 		<a href="/offload.php">
 			<svg class="icon icon-offload">

@@ -35,6 +35,13 @@
 				};
 			}
 
+			if ( typeof lity !== 'undefined' ) {
+				$(document).on('lity:open', function(event, lightbox, trigger) {
+					$(".lity-container").append( '<button class="lity-close lity-close--bottom" type="button" title="Close (Esc)" data-lity-close>×</button>' );
+				});
+
+			}
+
 		},
 
 

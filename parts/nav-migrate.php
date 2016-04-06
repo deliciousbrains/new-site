@@ -1,4 +1,4 @@
-<ul class="menu menu--product">
+<ul class="menu menu--product menu--migrate">
 	<li class="menu__item menu__item--product">
 		<a href="/migrate.php">
 			<svg class="icon icon-migrate">

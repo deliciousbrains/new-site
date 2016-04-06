@@ -52,13 +52,14 @@
 
 	@include e(brand) {
 		text-align: center;
-		padding: 2rem 5% 1rem;
+		padding: 3rem 5% 2rem;
 
 		@include bp(sm) {
 			padding-left: $half-gutter;
 			padding-right: $half-gutter;
 			align-self: center;
 			flex: 0 0 50%;
+			padding: 2rem 5% 1rem;
 		}
 
 		@include bp(md) {

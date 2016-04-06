@@ -10,7 +10,7 @@
 	left: 0;
 	white-space: nowrap;
 	background: #0b0b0b;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.75);
 	outline: none !important;
 	opacity: 0;
 	transition: opacity 0.3s ease;
@@ -90,11 +90,11 @@
 }
 .lity-close {
 	z-index: 9994;
-	width: 35px;
-	height: 35px;
+	width: 2.5rem;
+	height: 2.5rem;
 	position: fixed;
-	right: 0;
-	top: 0;
+	right: 1rem;
+	top: 1rem;
 	-webkit-appearance: none;
 	cursor: pointer;
 	text-decoration: none;
@@ -102,15 +102,24 @@
 	padding: 0;
 	color: #fff;
 	font-style: normal;
-	font-size: 35px;
+	font-size: 2.5rem;
 	font-family: sans-serif;
-	line-height: 35px;
+	line-height: 2.5rem;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 	border: 0;
 	background: none;
 	outline: none;
 	box-shadow: none;
+	transition: all .2s $transition;
 }
+.lity-close--bottom {
+	top: auto;
+	bottom: 1rem;
+	right: auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .lity-close::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -124,17 +133,18 @@
 	padding: 0;
 	color: #fff;
 	font-style: normal;
-	font-size: 35px;
+	font-size: 2.5rem;
 	font-family: sans-serif;
-	line-height: 35px;
+	line-height: 2.5rem;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 	border: 0;
 	background: none;
 	outline: none;
 	box-shadow: none;
+	color: palette();
 }
 .lity-close:active {
-	top: 1px;
+	//top: 1px;
 }
 /* Image */
 .lity-image img {

@@ -202,49 +202,55 @@
 <section class="about-giving">
 
 	<div class="about-giving--back">
-		<div class="about-giving__graphic">
-			<h2>Giving back to WordPress &amp; Open Source Software</h2>
-			<span>
-				<img src="/assets/images/logos/wp.png" alt="WordPress Logo">
-				<img src="/assets/images/logos/open-source.png" alt="Open Source Logo">
-			</span>
-		</div>
-		<div class="about-giving__description">
-			<p>Giving back is a big part of our company culture. We know we wouldn't be where we are today as professionals or as a company without WordPress and open source software. And so we are compelled to give back in time and money.</p>
+		<div class="container">
+			<div class="about-giving__graphic">
+				<h2>Giving back to WordPress &amp; Open Source Software</h2>
+				<span>
+					<img src="/assets/images/logos/wp.png" alt="WordPress Logo">
+					<img src="/assets/images/logos/open-source.png" alt="Open Source Logo">
+				</span>
+			</div>
+			<div class="about-giving__description">
+				<p>Giving back is a big part of our company culture. We know we wouldn't be where we are today as professionals or as a company without WordPress and open source software. And so we are compelled to give back in time and money.</p>
 
-			<p>Each member of the Delicious Brains team spends an entire day each month contributing to WordPress and other open source software. We started this in November 2014, shortly after Matt's <a href="#">Five for the Future</a> appeal. As individuals, most of us had contributed to WordPress and/or open source software, but the instances were few and far between. As a company we are committed to regular contributions each month.</p>
+				<p>Each member of the Delicious Brains team spends an entire day each month contributing to WordPress and other open source software. We started this in November 2014, shortly after Matt's <a href="#">Five for the Future</a> appeal. As individuals, most of us had contributed to WordPress and/or open source software, but the instances were few and far between. As a company we are committed to regular contributions each month.</p>
 
-			<p>We have also sponsored community meetups, WordCamps, and other WordPress conferences from time-to-time.</p>
+				<p>We have also sponsored community meetups, WordCamps, and other WordPress conferences from time-to-time.</p>
+			</div>
 		</div>
+		<span class="about-giving__bg about-giving__bg--left" style="background-image: url(/assets/images/about-giving-back.jpg);"></span>
 	</div>
 
 
 	<div class="about-giving--charity">
-		<div class="about-giving__description">
-			<div class="media">
-				<img src="/assets/images/logos/redcross.png" alt="" class="media__img">
-				<p class="media__body">From helping with refugee crises to controlling the spread of disease, the Red Cross is always there, helping people in the face of disaster. We make a modest monthly donation, but may also donate a lump sum for events where the Government of Canada offers to match donations.</p>
-			</div>
+		<div class="container">
+			<div class="about-giving__description">
+				<div class="media">
+					<img src="/assets/images/logos/redcross.png" alt="" class="media__img">
+					<p class="media__body">From helping with refugee crises to controlling the spread of disease, the Red Cross is always there, helping people in the face of disaster. We make a modest monthly donation, but may also donate a lump sum for events where the Government of Canada offers to match donations.</p>
+				</div>
 
-			<div class="media">
-				<img src="/assets/images/logos/amnesty.png" alt="" class="media__img">
-				<p class="media__body">We also donate a small monthly sum to Amnesty International to aid them in fighting injustice, exposing human rights violations, and pressuring governments to act.</p>
-			</div>
+				<div class="media">
+					<img src="/assets/images/logos/amnesty.png" alt="" class="media__img">
+					<p class="media__body">We also donate a small monthly sum to Amnesty International to aid them in fighting injustice, exposing human rights violations, and pressuring governments to act.</p>
+				</div>
 
-			<div class="media">
-				<img src="/assets/images/logos/feed-ns.png" alt="" class="media__img">
-				<p class="media__body">Nearly one million people, one third of whom are children, rely on assistance from food banks in Canada each month. We believe that nobody should go hungry in Canada, so we donate annually to Feed Nova Scotia.</p>
-			</div>
+				<div class="media">
+					<img src="/assets/images/logos/feed-ns.png" alt="" class="media__img">
+					<p class="media__body">Nearly one million people, one third of whom are children, rely on assistance from food banks in Canada each month. We believe that nobody should go hungry in Canada, so we donate annually to Feed Nova Scotia.</p>
+				</div>
 
-			<div class="media">
-				<img src="/assets/images/logos/wikipedia.png" alt="" class="media__img">
-				<p class="media__body">Can you imagine not having Wikipedia? Or having a Wikipedia with ads? We feel it's extremely important that Wikipedia remains free and nonprofit. To help that happen, we make an annual contribution to the Wikimedia Foundation.</p>
+				<div class="media">
+					<img src="/assets/images/logos/wikipedia.png" alt="" class="media__img">
+					<p class="media__body">Can you imagine not having Wikipedia? Or having a Wikipedia with ads? We feel it's extremely important that Wikipedia remains free and nonprofit. To help that happen, we make an annual contribution to the Wikimedia Foundation.</p>
+				</div>
+			</div>
+			<div class="about-giving__graphic">
+				<h2>Giving to Charity</h2>
+				<p>We are a global company. Our team and customers are distributed across the world, and as global citizens, it's important for us to do our part to make the world a better place. That means helping out where we can.</p>
 			</div>
 		</div>
-		<div class="about-giving__graphic">
-			<h2>Giving to Charity</h2>
-			<p>We are a global company. Our team and customers are distributed across the world, and as global citizens, it's important for us to do our part to make the world a better place. That means helping out where we can.</p>
-		</div>
+		<span class="about-giving__bg" style="background-image: url(/assets/images/about-giving-charity.jpg);"></span>
 	</div>
 
 </section>

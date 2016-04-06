@@ -6,11 +6,12 @@
 	margin: 4rem 0 2.5rem;
 	font-size: .9rem;
 	text-transform: uppercase;
-	flex-direction: column;
+	flex-wrap: wrap;
+	flex-direction: row;
+	//flex-direction: column;
 
-	@include bp(md) {
-		flex-direction: row;
-	}
+	// @include bp(md) {
+	// }
 
 	@include e(prev) {
 		text-align: left;
@@ -18,12 +19,18 @@
 	}
 	@include e(next) {
 		text-align: right;
-		align-self: flex-end;
+		align-self: flex-start;
+		@include bp(md) {
+			align-self: flex-end;
+		}
 	}
 	@include e(pages) {
 		@include bp(max md) {
-			margin-top: 1rem;
-			margin-bottom: 1rem;
+			margin: 1rem auto;
+			order: 2;
+			display: flex;
+			width: 100%;
+			justify-content: center;
 		}
 	}
 

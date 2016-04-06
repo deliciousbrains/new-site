@@ -4,7 +4,7 @@
 		position: fixed !important;
 		top: 0;
 		left: 0;
-		width: 60%;
+		width: 100%;
 		transform: translateX(-100%);
 		transition: all .5s $transition;
 		background-color: #3e4951;
@@ -277,6 +277,24 @@
 		// 		display: inline-block;
 		// 	}
 		// }
+	} // product
+
+	@include m(migrate) {
+		.menu__item a:hover {
+			color: palette(blue);
+		}
+		.icon:hover {
+			fill: palette(blue);
+		}
+	}
+
+	@include m(offload) {
+		.menu__item a:not(.btn):hover {
+			color: palette(green);
+		}
+		.icon:hover {
+			fill: palette(green);
+		}
 	}
 
 	@include b(sub-menu) {
@@ -301,6 +319,9 @@
 			line-height: 1.2;
 			padding: .25rem;
 			margin: 0;
+			@include bp(max md) {
+				font-size: .8rem;
+			}
 		}
 
 	}

@@ -45,7 +45,7 @@
 			flex-direction: column;
 
 			@include bp(md) {
-				padding: 2rem $column-width*2;
+				padding: 2rem 10.666%;//$column-width*2;
 			}
 		}
 

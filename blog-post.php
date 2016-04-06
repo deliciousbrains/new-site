@@ -78,8 +78,8 @@
 		<h3 class="related__title">Related Posts</h3>
 		<form action="#" class="related__search">
 			<div class="form-group">
-				<input type="email" id="email" placeholder="Enter your email address">
-				<button type="submit" class="btn btn--danger-dark">
+				<input type="text" id="related" placeholder="find related posts">
+				<button type="submit" class="btn btn--danger">
 					<svg class="icon icon-search">
 						<use xlink:href="#icon-search"></use>
 					</svg>

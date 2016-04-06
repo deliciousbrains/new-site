@@ -51,6 +51,9 @@
 
 	@include m(danger-dark) {
 		background-color: palette(brand,200);
+		&:hover {
+			background-color: lighten(palette(brand,200), 15%);
+		}
 	}
 
 	@include m(outline) {
