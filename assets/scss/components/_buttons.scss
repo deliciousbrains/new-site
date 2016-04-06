@@ -69,7 +69,7 @@
 
 		&:hover {
 			color: #fff;
-			background-color: palette(grey);
+			background-color: darken(palette(grey), 15%);
 		}
 	}
 
@@ -82,7 +82,7 @@
 
 		&:hover {
 			color: #fff;
-			background-color: palette(blue);
+			background-color: darken(palette(blue), 15%);
 		}
 	}
 
@@ -96,7 +96,7 @@
 
 		&:hover {
 			color: #fff;
-			background-color: palette(green);
+			background-color: darken(palette(green), 15%);
 		}
 	}
 
@@ -110,7 +110,7 @@
 
 		&:hover {
 			color: #fff;
-			background-color: palette();
+			background-color: darken(palette(), 15%);
 		}
 	}
 

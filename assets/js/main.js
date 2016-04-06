@@ -20,6 +20,8 @@
 
 			BRAINS.popover();
 
+			BRAINS.section_links();
+
 			BRAINS.setup_resp_nav();
 
 			if ( typeof Tablesaw !== 'undefined' ) {
@@ -141,6 +143,30 @@
 
 			});
 		},
+
+
+		section_links : function() {
+
+			$(".faq__categories").on( 'click', 'a', function(e) {
+				e.preventDefault();
+				var $this  = $(this),
+						href   = $this.attr('href'),
+						target = $(href),
+						dist   = target.offset().top - 73, // 73 is height of product nav
+						speed  = ( dist / 150 ) * 100;
+						//dist   = Math.abs( $(window).scrollTop() - target.offset().top ),
+						//speed  = ( dist / 150 ) * 100;
+
+						// console.log($(window).scrollTop());
+						// console.log(target.offset().top);
+
+				$("html,body").animate({
+					scrollTop: dist
+				}, speed );
+			});
+
+		},
+
 
 		setup_resp_nav : function() {
 			var label = "<svg class='icon icon-navicon'><use xlink:href='#icon-navicon'></use></svg> <span>Menu</span>";

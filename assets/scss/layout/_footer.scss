@@ -31,6 +31,10 @@
 			min-height: 400px;
 		}
 
+		a {
+			transition: all .2s $transition;
+		}
+
 		@include e(posts) {
 			background-color: #fff;//#3e4951;
 			padding: 0 $gutter-width-px/2;
@@ -48,6 +52,9 @@
 				a {
 					margin-left: auto;
 					padding-right: $gutter-width;
+					&:hover {
+						color: palette(brand,200);
+					}
 				}
 			}
 		}
@@ -127,6 +134,10 @@
 
 	@include e(colophon) {
 		padding: 1rem 5%;
+
+		a {
+			transition: all .2s $transition;
+		}
 
 		@include bp(md) {
 			align-items: center;
@@ -216,6 +227,9 @@
 		margin-bottom: .5rem;
 		a {
 			color: palette(slate,300);
+			&:hover {
+				color: palette(slate);
+			}
 		}
 	}
 

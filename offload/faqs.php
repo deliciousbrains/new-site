@@ -72,7 +72,7 @@
 			<a href="#" class="back_to_top">Back To Top</a>
 
 		</section>
-		<section class="faq__section" id="dscounts">
+		<section class="faq__section" id="discounts">
 			<h2 class="faq__section__title">Discounts</h2>
 
 			<p class="faq__question">Q</p>

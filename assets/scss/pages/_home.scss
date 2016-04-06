@@ -187,6 +187,15 @@
 
 		&:first-of-type {
 			margin-top: 0;
+			.btn:hover {
+				background-color: palette(blue);
+				border-color: palette(blue);
+			}
+		}
+
+		.btn:hover {
+			background-color: palette(green);
+			border-color: palette(green);
 		}
 
 		header {
@@ -225,7 +234,7 @@
 
 				&:hover {
 					color: #fff;
-					background-color: #707070;
+					//background-color: #707070;
 				}
 			}
 		}

@@ -1,6 +1,7 @@
 @include b(well) {
 	background: palette(grey,900);
 	padding: 1rem;
+	z-index: 2000;
 
 	&.fixed {
 		position: fixed;
