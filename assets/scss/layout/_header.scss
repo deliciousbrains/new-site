@@ -10,6 +10,17 @@
 		display: flex;
 		flex-wrap: wrap;
 
+		transform: translateY(0);
+		transition: all .2s $transition;
+
+		@include bp(max 769px) {
+			position: fixed;
+
+			&.nav-up {
+				transform: translateY(-2.5rem);
+			}
+		}
+
 		@include m(blank) {
 			background-color: transparent;
 		}

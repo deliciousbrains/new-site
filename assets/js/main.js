@@ -24,6 +24,12 @@
 
 			BRAINS.setup_resp_nav();
 
+			BRAINS.sticky_product_menu();
+
+			if ( window.matchMedia("(max-width: 769px)").matches ) {
+				BRAINS.nav_scroll_down();
+			}
+
 			if ( typeof Tablesaw !== 'undefined' ) {
 				$( document ).trigger( "enhance.tablesaw" );
 
@@ -45,6 +51,68 @@
 		},
 
 
+		sticky_product_menu : function() {
+			$(".menu--product").each(function() {
+				var $this = $(this),
+						top   = $this.offset().top,
+						d     = function() {
+				    	var scrolltop = $(window).scrollTop();
+				      scrolltop > top ? $this.addClass("sticky") : $this.removeClass("sticky")
+					  };
+				d();
+				$(window).scroll( $.throttle( 200, d ) );
+			});
+		},
+
+
+		nav_scroll_down : function() {
+
+			var didScroll,
+					lastScrollTop = 0,
+					delta         = 5,
+					navbar        = $('.site__header'),
+					navbarHeight  = navbar.outerHeight();
+
+			$(window).scroll( function() {
+				didScroll = true;
+			});
+
+			setInterval(function() {
+				if ( didScroll ) {
+				  hasScrolled();
+				  didScroll = false;
+				}
+			}, 250);
+
+			function hasScrolled() {
+				var st = $(this).scrollTop();
+
+				//console.log(st);
+
+				// Make sure they scroll more than delta
+				if ( Math.abs(lastScrollTop - st) <= delta )
+					return;
+
+				// If they scrolled down and are past the navbar, add class .nav-up.
+				// This is necessary so you never see what is "behind" the navbar.
+				if ( st > lastScrollTop && st > navbarHeight ) {
+					navbar.addClass('nav-up');
+					console.log("NAV UP");
+				} else {
+					if ( st + $(window).height() < $(document).height() ) {
+						navbar.removeClass('nav-up');
+						console.log("NAV DOWN");
+					}
+				}
+
+				lastScrollTop = st;
+
+			}
+
+
+		},
+
+
 		popover : function() {
 
 			// remove this so the cookie persists.
@@ -54,7 +122,7 @@
 			if ( "undefined" == typeof $.cookie("no_subscribe_popover") ) {
 				var close = $('<a class="well__close" href="#0"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></a>');
 
-				if ( $(window).width() >= 1350 ) {
+				if ( window.matchMedia("(min-width: 1350px)").matches ) {
 					BRAINS.subscribe
 						.addClass("fixed")
 						.detach()
@@ -63,7 +131,7 @@
 				}
 
 				$(window).resize( $.throttle( 200, function() {
-					if ( $(window).width() >= 1350 ) {
+					if ( window.matchMedia("(min-width: 1350px)").matches ) {
 						BRAINS.subscribe
 							.addClass("fixed")
 							.detach()
@@ -251,16 +319,3 @@
 
 })(jQuery);
 
-
-
-
-$(".menu--product").each(function() {
-    var $this = $(this),
-    		top   = $this.offset().top,
-    		d     = function() {
-        	var scrolltop = $(window).scrollTop();
-	        scrolltop > top ? $this.addClass("sticky") : $this.removeClass("sticky")
-			  };
-    d();
-    $(window).scroll( $.throttle( 200, d ) );
-});
