@@ -9,12 +9,12 @@
 		max-width: $max-width;
 		left: 50%;
 		transform: translateX(-50%);
-		margin-top: 1rem;
+		margin-top: 3rem;
 		// padding-left: 5%;//$column-width - $half-gutter;
 		// padding-right: 5%;//$column-width - $half-gutter;
 
 		@include bp(md) {
-			margin-top: 3rem;
+			//margin-top: 3rem;
 			padding-bottom: 2rem;
 		}
 

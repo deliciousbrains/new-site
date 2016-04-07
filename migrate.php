@@ -144,36 +144,43 @@
 			<h3 class="accordion__title open">Push and Pull your databases</h3>
 			<div class="accordion__content open" data-image="/assets/images/how-it-works-1.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/how-it-works-1.jpg" alt="Push and Pull your databases">
 			</div>
 
 			<h3 class="accordion__title">Find & replace that handles serialized data</h3>
 			<div class="accordion__content" data-image="/assets/images/product-fpo.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/product-fpo.jpg" alt="Find & replace that handles serialized data">
 			</div>
 
 			<h3 class="accordion__title">Backup your database before replacing it</h3>
 			<div class="accordion__content" data-image="/assets/images/how-it-works-1.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/how-it-works-1.jpg" alt="Push and Pull your databases">
 			</div>
 
 			<h3 class="accordion__title">Take control of your migration and follow its progress</h3>
 			<div class="accordion__content" data-image="/assets/images/product-fpo.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/product-fpo.jpg" alt="Find & replace that handles serialized data">
 			</div>
 
 			<h3 class="accordion__title">Media Files Addon</h3>
 			<div class="accordion__content" data-image="/assets/images/product-fpo.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/product-fpo.jpg" alt="Find & replace that handles serialized data">
 			</div>
 
 			<h3 class="accordion__title">CLI Addon</h3>
 			<div class="accordion__content" data-image="/assets/images/product-fpo.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/product-fpo.jpg" alt="Find & replace that handles serialized data">
 			</div>
 
 			<h3 class="accordion__title">Another Addon</h3>
 			<div class="accordion__content" data-image="/assets/images/product-fpo.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
+				<img src="/assets/images/product-fpo.jpg" alt="Find & replace that handles serialized data">
 			</div>
 
 			<a href="#0" class="btn btn--lg btn--danger">

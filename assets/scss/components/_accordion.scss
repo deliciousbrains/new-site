@@ -49,9 +49,16 @@
 			margin: 0;
 		}
 
+		img {
+			margin: 1rem 0 0;
+			@include bp(md) {
+				display: none;
+			}
+		}
+
 		&.open {
 			visibility: visible;
-			max-height: 400px;
+			max-height: 1400px;
 			padding-bottom: 1rem;
 			//margin-bottom: 1rem;
 			border-bottom: 1px solid palette(grey,700);
