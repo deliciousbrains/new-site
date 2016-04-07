@@ -13,7 +13,9 @@
 				<svg class="icon icon-logo">
 					<use xlink:href="#icon-logo"></use>
 				</svg>
-				Hi. We're Delicious Brains. <br>We make super awesome <br>plugins for WordPress.
+				<span>
+					Hi. We're Delicious Brains. <br>We make super awesome <br>plugins for WordPress.
+				</span>
 			</h1>
 		</div>
 
