@@ -81,7 +81,7 @@
 				opacity: 0;
 				animation-name: fadeIn;
 				animation-duration: 1s;
-				animation-delay: 1.25s;
+				animation-delay: .25s;
 				animation-fill-mode: forwards;
 				&::after {
 					content: '';
@@ -131,7 +131,7 @@
 					transform: none;
 					opacity: 0;
 					animation-name: fadeIn;
-					animation-delay: .25s;
+					animation-delay: 0;
 					animation-duration: 1s;
 					animation-fill-mode: forwards;
 				}
@@ -195,11 +195,11 @@
 		padding-top: 1rem;
 		margin-top: 1rem;
 		opacity: 0;
-		transform: translate3d(100%, 0, 0);
+		//transform: translate3d(100%, 0, 0);
 
-		animation-name: fadeInRight;
+		animation-name: fadeIn;
 		animation-duration: 1s;
-		animation-delay: 3s;
+		animation-delay: 1.9s;
 		animation-fill-mode: forwards;
 
 		@include bp(md) {
@@ -209,7 +209,7 @@
 
 		&:first-of-type {
 			margin-top: 0;
-			animation-delay: 2s;
+			animation-delay: .95s;
 			.btn:hover {
 				background-color: palette(blue);
 				border-color: palette(blue);
