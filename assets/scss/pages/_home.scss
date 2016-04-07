@@ -75,6 +75,7 @@
 			color: palette();
 			padding-top: 1rem;
 			font-size: 1.4rem;
+			//outline: 1px solid red;
 
 			> span {
 				display: block;
@@ -83,6 +84,9 @@
 				animation-duration: 1s;
 				animation-delay: .25s;
 				animation-fill-mode: forwards;
+				//outline: 1px solid green;
+				//font-family: sans-serif;
+
 				&::after {
 					content: '';
 					width: 3.3rem;
@@ -122,6 +126,7 @@
 				width: 1.4rem;
 				height: 1.55rem;
 				fill: palette();
+				//outline: 1px solid blue;
 
 				@include bp(md) {
 					margin-bottom: 4rem;
