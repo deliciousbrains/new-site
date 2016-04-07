@@ -133,7 +133,7 @@
 </section>
 
 
-<section class="how-it-works"> <?php //style="background-image: url(/assets/images/how-it-works-1.jpg);" ?>
+<section class="how-it-works">
 
 	<div class="container">
 
@@ -176,9 +176,6 @@
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
 			</div>
 
-			<!-- <img src="/assets/images/how-it-works-1.jpg" alt="Push &amp; Pull Your Databases" class="accordion__image"> -->
-
-
 			<a href="#0" class="btn btn--lg btn--danger">
 				See Pricing
 				<svg class="icon icon-chevron-right">
@@ -188,7 +185,11 @@
 
 		</div>
 	</div>
+
+
 	<img src="/assets/images/how-it-works-1.jpg" alt="Push &amp; Pull Your Databases" class="accordion__image">
+
+
 </section>
 
 

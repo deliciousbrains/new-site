@@ -135,18 +135,35 @@
 
 
 		accordion : function(el) {
+			var img   = el.find('.accordion__image'),
+					clone = img.clone().addClass('accordion__image--hidden').insertAfter(img);
+
 			el.find('.accordion__title').on( 'click', function() {
+
 				var $this   = $(this),
 						img_url = $this.next().data('image'),
-						img     = el.find('.accordion__image');
+						vis_img = el.find('.accordion__image').not('.accordion__image--hidden'),
+						hid_img = el.find('.accordion__image--hidden');
 
 				//Expand or collapse this panel
-				$this.toggleClass('open').next().toggleClass('open');
+				$this
+					.toggleClass('open')
+					.next()
+					.toggleClass('open');
 
-				img.prop('src', img_url);
+				//swap image classes to get fade effect
+				hid_img
+					.prop('src', img_url)
+					.removeClass('accordion__image--hidden');
+
+				vis_img.addClass('accordion__image--hidden');
 
 				//Hide the other panels
-				el.find('.open').not($this).not($this.next()).removeClass('open');
+				el
+					.find('.open')
+					.not($this)
+					.not($this.next())
+					.removeClass('open');
 
 			});
 		},
