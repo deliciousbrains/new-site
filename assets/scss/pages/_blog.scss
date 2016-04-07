@@ -12,7 +12,7 @@
 
 		}
 		@include bp(lg) {
-			padding: 3rem $column-width*2;
+			padding: 3rem 10.666%;//$column-width*2;
 		}
 
 		@include bp(xl) {
@@ -44,8 +44,11 @@
 			padding: 2rem 5%;
 			flex-direction: column;
 
-			@include bp(md) {
+			@include bp(lg) {
 				padding: 2rem 10.666%;//$column-width*2;
+			}
+			@include bp(xl) {
+				padding: 2rem 200px;
 			}
 		}
 

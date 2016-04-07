@@ -54,11 +54,28 @@
 			if ( "undefined" == typeof $.cookie("no_subscribe_popover") ) {
 				var close = $('<a class="well__close" href="#0"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></a>');
 
-				BRAINS.subscribe
-					.addClass("fixed")
-					.detach()
-					.appendTo(".site__content")
-					.append(close);
+				if ( $(window).width() >= 1350 ) {
+					BRAINS.subscribe
+						.addClass("fixed")
+						.detach()
+						.appendTo(".site__content")
+						.append(close);
+				}
+
+				$(window).resize( $.throttle( 200, function() {
+					if ( $(window).width() >= 1350 ) {
+						BRAINS.subscribe
+							.addClass("fixed")
+							.detach()
+							.appendTo(".site__content")
+							.append(close);
+					} else {
+						BRAINS.subscribe
+							.removeClass("fixed")
+							.detach()
+							.appendTo(".blog__post");
+					}
+				} ) );
 
 				close.click(function() {
 
