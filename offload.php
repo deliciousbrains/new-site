@@ -201,7 +201,7 @@
 <?php include_once('parts/testimonials.php'); ?>
 
 
-<section class="features">
+<section class="features" id="addons">
 	<h2>Addons</h2>
 
 	<span class="addon">

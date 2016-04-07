@@ -188,7 +188,7 @@
 
 		section_links : function() {
 
-			$(".faq__category,.back_to_top").on( 'click', function(e) {
+			$(".faq__category,.back_to_top,.section_link").on( 'click', function(e) {
 				e.preventDefault();
 				var $this  = $(this),
 						href   = $this.attr('href'),

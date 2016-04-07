@@ -196,7 +196,7 @@
 <?php include_once('parts/testimonials.php'); ?>
 
 
-<section class="features">
+<section class="features" id="features">
 	<h2>Features</h2>
 
 	<div class="feature">

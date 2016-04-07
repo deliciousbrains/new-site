@@ -7,12 +7,12 @@
 		</a>
 	</li>
 	<li class="menu__item <?php echo ( $subpage == 'features' ) ? 'current-page-item' : ''; ?>">
-		<a href="#0">
+		<a class="section_link" href="#features">
 			Features
 		</a>
 	</li>
 	<li class="menu__item <?php echo ( $subpage == 'addons' ) ? 'current-page-item' : ''; ?>">
-		<a href="#0p">
+		<a class="section_link" href="#addons">
 			Addons
 		</a>
 	</li>
