@@ -66,6 +66,32 @@
 	// 	right: 100%;
 	// }
 
+
+	@include e(quote) {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.icon {
+			width: 1.6rem;
+			height: .8rem;
+			fill: palette(slate,600);
+			@include bp(sm) {
+				width: 3.2rem;
+				height: 1.6rem;
+			}
+		}
+
+		@include m(left) {
+			//top: 0%;
+		}
+		@include m(right) {
+			left: auto;
+			right: 0;
+		}
+	}
+
 	blockquote {
 		margin: 2rem 0;
 		position: relative;
@@ -76,30 +102,31 @@
 			padding-left: $column-width + $gutter-width;
 			padding-right: $column-width + $gutter-width;
 
-			&::before,&::after {
-				content: '';
-				background: url(/assets/images/left-quote.svg) no-repeat;
-				display: block;
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
+			// &::before,&::after {
+			// 	content: '';
+			// 	background: url(/assets/images/left-quote.svg) no-repeat;
+			// 	display: block;
+			// 	position: absolute;
+			// 	left: 0;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// 	display: none;
 
-				width: 1.6rem;
-				height: .8rem;
-				background-size: 1.6rem .8rem;
+			// 	width: 1.6rem;
+			// 	height: .8rem;
+			// 	background-size: 1.6rem .8rem;
 
-				@include bp(sm) {
-					width: 3.2rem;
-					height: 1.6rem;
-					background-size: 3.2rem 1.6rem;
-				}
-			}
-			&::after {
-				left: auto;
-				right: 0;
-				background-image: url(/assets/images/right-quote.svg);
-			}
+			// 	@include bp(sm) {
+			// 		width: 3.2rem;
+			// 		height: 1.6rem;
+			// 		background-size: 3.2rem 1.6rem;
+			// 	}
+			// }
+			// &::after {
+			// 	left: auto;
+			// 	right: 0;
+			// 	background-image: url(/assets/images/right-quote.svg);
+			// }
 		}
 
 
