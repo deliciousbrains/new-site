@@ -315,10 +315,25 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		bottom: 50%;
+		bottom: 60%;
 		//display: none;
 		background-size: cover;
 		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		@include bp(sm) {
+			bottom: 50%;
+		}
+
+		.about-giving--charity & {
+			bottom: 70%;
+			@include bp(sm) {
+				bottom: 60%;
+			}
+			@include bp(lg) {
+				bottom: 0;
+			}
+		}
 
 		@include bp(lg) {
 			width: 50%;
@@ -326,7 +341,7 @@
 			right: 0;
 			left: auto;
 			bottom: 0;
-			background-position: 100% 100%;
+			//background-position: 100% 100%;
 		}
 
 		@include m(left) {
