@@ -280,6 +280,7 @@
 	} // product
 
 	@include m(migrate) {
+		.menu__item.current-page-item > a,
 		.menu__item a:not(.btn):hover {
 			color: palette(blue);
 		}
@@ -289,6 +290,7 @@
 	}
 
 	@include m(offload) {
+		.menu__item.current-page-item > a,
 		.menu__item a:not(.btn):hover {
 			color: palette(green);
 		}
