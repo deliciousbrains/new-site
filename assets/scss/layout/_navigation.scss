@@ -58,6 +58,16 @@
 	list-style: none;
 	width: 100%;
 	max-width: $max-width;
+	display: flex;
+	justify-content: center;
+
+	&::before {
+		display: block;
+		width: 1px;
+		height: 1px;
+		content: '';
+		margin-right: auto;
+	}
 
 	@include e(item) {
 		margin: 0;
@@ -102,14 +112,7 @@
 		}
 
 		@include m(account) {
-			@include bp(md) {
-				position: absolute;
-				right: 5%;
-			}
-			@include bp(lg) {
-				right: auto;
-				left: 100%;
-			}
+			margin-left: auto;
 		}
 
 		@include m(button) {
@@ -378,6 +381,9 @@
   width: 100%;
   display: block;
   list-style: none;
+  @include bp(md) {
+  	display: flex;
+  }
 }
 
 .js .nav-collapse {
