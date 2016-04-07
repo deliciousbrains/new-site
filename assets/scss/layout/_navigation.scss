@@ -280,7 +280,7 @@
 	} // product
 
 	@include m(migrate) {
-		.menu__item a:hover {
+		.menu__item a:not(.btn):hover {
 			color: palette(blue);
 		}
 		.icon:hover {
