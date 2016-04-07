@@ -109,7 +109,7 @@
 </header>
 
 
-<section class="plugin-features plugin-features--offload">
+<section class="plugin-features plugin-features--offload" id="features">
 	<div class="container container--center">
 		<div class="left-half">
 			<h3>Copy files from your wordpress media library to Amazon S3 to serve your assets.</h3>

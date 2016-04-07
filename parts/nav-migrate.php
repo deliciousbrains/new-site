@@ -11,11 +11,11 @@
 			Features
 		</a>
 	</li>
-	<li class="menu__item <?php echo ( $subpage == 'addons' ) ? 'current-page-item' : ''; ?>">
+	<!-- <li class="menu__item <?php echo ( $subpage == 'addons' ) ? 'current-page-item' : ''; ?>">
 		<a class="section_link" href="#addons">
 			Addons
 		</a>
-	</li>
+	</li> -->
 	<li class="menu__item <?php echo ( $subpage == 'pricing' ) ? 'current-page-item' : ''; ?>">
 		<a href="/migrate/pricing.php">
 			Pricing &amp; Purchase
