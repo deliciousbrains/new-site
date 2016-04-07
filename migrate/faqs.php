@@ -6,7 +6,7 @@
 ?>
 
 
-<header class="page-header page-header--migrate">
+<header class="page-header page-header--migrate" id="top">
 	<?php include_once('../parts/nav-migrate.php'); ?>
 	<h1 class="page-title">Frequently Asked Questions</h1>
 </header>
@@ -46,7 +46,7 @@
 			<p class="faq__answer">No, WP Migrate DB Pro only works with WordPress.</p>
 
 			<hr>
-			<a href="#" class="back_to_top">Back To Top</a>
+			<a href="#top" class="back_to_top">Back To Top</a>
 
 		</section>
 		<section class="faq__section" id="licenses">
@@ -59,7 +59,7 @@
 			<p class="faq__answer">Any time you activate the plugin license on a site with a new URL, that counts as an install. So, http://dev.awesomesite.com and http://awesomesite.com would be two installs.</p>
 
 			<hr>
-			<a href="#" class="back_to_top">Back To Top</a>
+			<a href="#top" class="back_to_top">Back To Top</a>
 
 		</section>
 		<section class="faq__section" id="data">
@@ -69,7 +69,7 @@
 			<p class="faq__answer">No, WP Migrate DB Pro only works with WordPress.</p>
 
 			<hr>
-			<a href="#" class="back_to_top">Back To Top</a>
+			<a href="#top" class="back_to_top">Back To Top</a>
 
 		</section>
 		<section class="faq__section" id="discounts">
@@ -79,7 +79,7 @@
 			<p class="faq__answer">No, WP Migrate DB Pro only works with WordPress.</p>
 
 			<hr>
-			<a href="#" class="back_to_top">Back To Top</a>
+			<a href="#top" class="back_to_top">Back To Top</a>
 
 		</section>
 

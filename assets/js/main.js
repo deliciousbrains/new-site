@@ -188,18 +188,17 @@
 
 		section_links : function() {
 
-			$(".faq__categories").on( 'click', 'a', function(e) {
+			$(".faq__category,.back_to_top").on( 'click', function(e) {
 				e.preventDefault();
 				var $this  = $(this),
 						href   = $this.attr('href'),
 						target = $(href),
 						dist   = target.offset().top - 73, // 73 is height of product nav
 						speed  = ( dist / 150 ) * 100;
-						//dist   = Math.abs( $(window).scrollTop() - target.offset().top ),
-						//speed  = ( dist / 150 ) * 100;
 
-						// console.log($(window).scrollTop());
-						// console.log(target.offset().top);
+				if ( speed < 0 ) {
+					speed = 200;
+				}
 
 				$("html,body").animate({
 					scrollTop: dist
