@@ -26,7 +26,7 @@
 
 			BRAINS.sticky_product_menu();
 
-			if ( window.matchMedia("(max-width: 769px)").matches ) {
+			if ( window.matchMedia("(max-width: 768px)").matches ) {
 				BRAINS.nav_scroll_down();
 			}
 

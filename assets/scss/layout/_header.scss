@@ -13,7 +13,7 @@
 		transform: translateY(0);
 		transition: all .2s $transition;
 
-		@include bp(max 769px) {
+		@include bp(max 768px) {
 			position: fixed;
 
 			&.nav-up {
