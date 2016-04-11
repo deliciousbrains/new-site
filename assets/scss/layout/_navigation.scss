@@ -5,15 +5,15 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		transform: translateX(-100%);
+		transform: translateY(-100%);
 		transition: all .5s $transition;
-		background-color: #3e4951;
-		z-index: 1000;
+		background-color: rgba(black,0.9);
+		z-index: 1001;
 		//min-height: 75vh;
 
 		&.opened {
 			@include bp(max md) {
-				transform: translateX(0);
+				transform: translateY(0);
 			}
 		}
 
@@ -75,7 +75,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		padding-right: .5rem;
-		border-bottom: 1px solid palette(grey,400);
+		border-bottom: 1px solid palette(grey,200);
 
 		@include bp(md) {
 			display: inline-block;
@@ -325,7 +325,7 @@
 			padding: .25rem;
 			margin: 0;
 			@include bp(max md) {
-				font-size: .8rem;
+				font-size: .9rem;
 			}
 		}
 

@@ -6,7 +6,7 @@
 		right: 0;
 		background-color: rgba(palette(grey,100), 0.8);
 		height: 2.5rem;
-		z-index: 1000;
+		z-index: 1100;
 		display: flex;
 		flex-wrap: wrap;
 
@@ -18,6 +18,9 @@
 
 			&.nav-up {
 				transform: translateY(-2.5rem);
+				.js-nav-active & {
+					transform: translateY(0);
+				}
 			}
 		}
 

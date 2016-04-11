@@ -141,8 +141,14 @@
 
 		<div class="accordion">
 
-			<h3 class="accordion__title open">Push and Pull your databases</h3>
-			<div class="accordion__content open" data-image="/assets/images/how-it-works-1.jpg">
+			<?php
+				$open = '';
+				// for WordPress
+				//if ( ! wp_is_mobile() ) $open = 'open';
+			?>
+
+			<h3 class="accordion__title <?php echo $open; ?>">Push and Pull your databases</h3>
+			<div class="accordion__content <?php echo $open; ?>" data-image="/assets/images/how-it-works-1.jpg">
 				<p>Let's say you're developing locally but need the latest data from the live database. With WP Migrate DB Pro installed on both sites, you can simply pull the live database down and replace your local database (even if you local database isn't publicly accessible). Once your changes are ready for the staging site, you can push your local database up and replace your staging database. How's that for a workflow?</p>
 				<img src="/assets/images/how-it-works-1.jpg" alt="Push and Pull your databases">
 			</div>

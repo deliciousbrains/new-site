@@ -97,11 +97,9 @@
 				// This is necessary so you never see what is "behind" the navbar.
 				if ( st > lastScrollTop && st > navbarHeight ) {
 					navbar.addClass('nav-up');
-					console.log("NAV UP");
 				} else {
 					if ( st + $(window).height() < $(document).height() ) {
 						navbar.removeClass('nav-up');
-						console.log("NAV DOWN");
 					}
 				}
 

@@ -21,6 +21,8 @@
 
 	@include m(offload) {
 		background-image: url(/assets/images/bg-offload.jpg);
+		display: flex;
+		flex-direction: column;
 		h2,h3 {
 			color: palette(green);
 		}
