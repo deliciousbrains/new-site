@@ -1,0 +1,58 @@
+header.page-404 {
+	background-color: palette();
+
+	justify-content: center;
+	text-align: center;
+	max-width: $max-width;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	padding: 3rem 5%;
+
+	&::before,&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 100%;
+		bottom: 0;
+		background: palette();
+		width: 99rem;
+	}
+	&::after {
+		left: auto;
+		right: 100%;
+	}
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	h1 {
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		color: palette(brand,400);
+		margin-bottom: 2.5rem;
+	}
+
+	img {
+		max-width: 90%;
+		height: auto;
+	}
+
+	h2 {
+		color: #fff;
+		margin: 3rem 0 1.25rem;
+	}
+
+	.btn {
+		background-color: palette(slate,300);
+		&:hover {
+			background-color: palette(slate,500);
+		}
+	}
+
+
+}

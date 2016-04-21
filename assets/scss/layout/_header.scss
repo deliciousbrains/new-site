@@ -13,6 +13,11 @@
 		transform: translateY(0);
 		transition: all .2s $transition;
 
+		.page-404 & {
+			position: relative;
+			background-color: palette(grey,100);
+		}
+
 		@include bp(max 768px) {
 			position: fixed;
 

@@ -45,26 +45,8 @@
 	background: url(/assets/images/bg-testimonials.jpg); //linear-gradient(to bottom, #2e3335, #25292c);
 	background-size: cover;
 	color: #fff;
-	// position: relative;
-	// max-width: $max-width;
-	// left: 50%;
-	// transform: translateX(-50%);
 	text-align: center;
 	padding: 2.5rem 0;
-
-	// &::before,&::after {
-	// 	content: '';
-	// 	background: linear-gradient(to bottom, #2e3335, #25292c);
-	// 	position: absolute;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	width: 99rem;
-	// 	left: 100%;
-	// }
-	// &::after {
-	// 	left: auto;
-	// 	right: 100%;
-	// }
 
 
 	@include e(quote) {
@@ -101,32 +83,6 @@
 			position: relative;
 			padding-left: $column-width + $gutter-width;
 			padding-right: $column-width + $gutter-width;
-
-			// &::before,&::after {
-			// 	content: '';
-			// 	background: url(/assets/images/left-quote.svg) no-repeat;
-			// 	display: block;
-			// 	position: absolute;
-			// 	left: 0;
-			// 	top: 50%;
-			// 	transform: translateY(-50%);
-			// 	display: none;
-
-			// 	width: 1.6rem;
-			// 	height: .8rem;
-			// 	background-size: 1.6rem .8rem;
-
-			// 	@include bp(sm) {
-			// 		width: 3.2rem;
-			// 		height: 1.6rem;
-			// 		background-size: 3.2rem 1.6rem;
-			// 	}
-			// }
-			// &::after {
-			// 	left: auto;
-			// 	right: 0;
-			// 	background-image: url(/assets/images/right-quote.svg);
-			// }
 		}
 
 
