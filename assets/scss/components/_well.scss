@@ -54,7 +54,7 @@
 		@include e(title) {
 			color: #fff;
 			font-family: ff(body);
-			margin-bottom: 0;
+			//margin-bottom: 0;
 		}
 
 		p {
@@ -65,7 +65,7 @@
 	@include e(title) {
 		color: palette(grey,500);
 		margin-bottom: .75rem;
-		// font-size: .9rem;
 		letter-spacing: .025rem;
+		line-height: 1.2;
 	}
 }

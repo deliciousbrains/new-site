@@ -281,6 +281,10 @@
 		text-align: center;
 		width: auto;
 		align-self: initial;
+		margin-top: .75rem;
+		@include bp(sm) {
+			margin-top: 0;
+		}
 		a.author__social__icon {
 			width: 1.5rem;
 			height: 1.5rem;
@@ -300,5 +304,15 @@
 				height: .8rem;
 			}
 		}
+	} // social
+
+	@include bp(max sm) {
+		img {
+			float: left;
+			width: 4.5rem;
+		}
+		@include e(bio) {
+			font-size: .7rem;
+		}
 	}
-}
+} // author
