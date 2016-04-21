@@ -75,7 +75,24 @@
 			color: palette();
 			padding-top: 1rem;
 			font-size: 1.4rem;
-			//outline: 1px solid red;
+
+			@include bp(sm) {
+				font-size: 1.6rem;
+			}
+
+			@include bp(md) {
+				padding-top: 0;
+				margin-left: $column-width;
+			}
+
+			@include bp(md 905px) {
+				font-size: 1.3rem;
+			}
+
+			@include bp(lg) {
+				font-size: 1.8rem;
+				//margin-left: $two-column;
+			}
 
 			> span {
 				display: block;
@@ -84,8 +101,6 @@
 				animation-duration: 1s;
 				animation-delay: .25s;
 				animation-fill-mode: forwards;
-				//outline: 1px solid green;
-				//font-family: sans-serif;
 
 				&::after {
 					content: '';
@@ -100,20 +115,6 @@
 						display: inline-block;
 					}
 				}
-			}
-
-			@include bp(sm) {
-				font-size: 1.6rem;
-			}
-
-			@include bp(md) {
-				padding-top: 0;
-				margin-left: $column-width;
-			}
-
-			@include bp(lg) {
-				font-size: 1.8rem;
-				//margin-left: $two-column;
 			}
 
 
@@ -230,21 +231,11 @@
 			display: flex;
 			margin-bottom: .75rem;
 			align-items: center;
-			//padding-left: 3rem;
-
-			//@include bp(md) {
-				padding-left: 2rem;
-			//}
+			padding-left: 2rem;
 
 			@include bp(lg) {
 				padding-left: 3rem;
-				//padding-left: $column-width;
-				//padding-left: $column-width*3;
 			}
-
-			// h3 {
-			// 	font-size: .8rem;
-			// }
 
 			.btn {
 				color: #707070;
@@ -252,13 +243,17 @@
 				margin: 0;
 				padding: .5rem;
 				font-size: .55rem;
-				//display: none;
 
-				@include bp(md) {
+				@include bp(sm) {
+					font-size: .6rem;
+				}
+
+				@include bp(lg) {
 					display: inline-block;
 					padding: .7rem 1rem;
 					font-size: .7rem;
 				}
+
 
 				&:hover {
 					color: #fff;
@@ -272,6 +267,14 @@
 			color: palette(blue,200);
 			position: relative;
 			padding-right: .5rem;
+
+			@include bp(max 790px) {
+				font-size: .8rem;
+			}
+
+			@include bp(max sm) {
+				font-size: .7rem;
+			}
 
 			$icon-width: 2rem;
 
