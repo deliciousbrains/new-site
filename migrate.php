@@ -27,7 +27,7 @@
 					<img class="media__img" src="https://pbs.twimg.com/profile_images/1341344778/n82408466_32367502_3013-300x201_200x200.jpg" alt="Pippin">
 					<div class="media__body">
 						<h5 class="tweet-by">Pippinsplugins @pippinsplugins</h5>
-						<p class="tweet-body">“WP Migrate DB Pro might be the most amazing thing that has happened in a really long time in the #WordPress world: deliciousbrains.com/wp-migrate-db-pro/ …”</p>
+						<p class="tweet-body">“WP Migrate DB Pro might be the most amazing thing that has happened in a really long time in the #WordPress world: <a href="#">deliciousbrains.com/wp-migrate-db-pro/</a> …”</p>
 						<svg class="icon icon-twitter">
 							<use xlink:href="#icon-twitter"></use>
 						</svg>
