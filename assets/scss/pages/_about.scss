@@ -425,8 +425,13 @@
 		}
 
 		.media__img {
-			width: 14.333%;
-			margin-right: 7.564%;
+			margin: 0 auto .5rem;
+			display: block;
+
+			@include bp(sm) {
+				width: 14.333%;
+				margin-right: 7.564%;
+			}
 		}
 
 	} // description
