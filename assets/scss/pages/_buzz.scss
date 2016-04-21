@@ -122,10 +122,11 @@
 
 		@include b(media) {
 			margin: 0 $half-gutter 1.5rem;
-			padding: .5rem 1rem 1rem;
+			padding: 1rem;
 			border-color: palette(blue,700);
 			color: palette(grey,400);
 			flex: 0 0 100%;
+			align-items: flex-start;
 
 			@include bp(md) {
 				flex: 0 0 50% - $gutter-width;

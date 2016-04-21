@@ -110,6 +110,8 @@
 @include b(tweet-by) {
 	color: palette(grey);
 	font-family: ff(body);
+	line-height: 1.2;
+	margin-bottom: .5rem;
 }
 
 @include b(tweet-body) {
