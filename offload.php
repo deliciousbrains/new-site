@@ -11,11 +11,28 @@
 	<?php include_once('parts/nav-offload.php'); ?>
 	<div class="plugin-intro__content">
 
-		<a href="https://www.youtube.com/watch?v=Y5k0wTCyixw" class="plugin-intro__play" data-lity>
-			<svg class="icon icon-play">
-				<use xlink:href="#icon-play"></use>
+		<div class="plugin-intro__content--mobile">
+			<svg class="icon icon-offload">
+				<use xlink:href="#icon-offload"></use>
 			</svg>
-		</a>
+			<div>
+				<a href="https://www.youtube.com/watch?v=fHFcH4bCzmU" class="btn btn--outline btn--success" data-lity>
+					Watch Demo
+					<svg class="icon icon-chevron-right">
+						<use xlink:href="#icon-chevron-right"></use>
+					</svg>
+				</a>
+				<a href="#" class="btn btn--success">Get Plugin</a>
+			</div>
+		</div>
+
+		<div class="plugin-intro__content--desktop">
+			<a href="https://www.youtube.com/watch?v=Y5k0wTCyixw" class="plugin-intro__play" data-lity>
+				<svg class="icon icon-play">
+					<use xlink:href="#icon-play"></use>
+				</svg>
+			</a>
+		</div>
 
 		<h1>WP Offload S3</h1>
 		<h2>Speed Up Your WordPress Site</h2>

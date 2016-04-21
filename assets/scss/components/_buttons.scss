@@ -15,11 +15,11 @@
 
 	.icon {
 		fill: currentColor;
-		width: 1rem;
-		height: 1rem;
+		width: .8rem;
+		height: .8rem;
 		vertical-align: top;
 		position: relative;
-		left: 1.25rem;
+		left: .5rem;
 	}
 
 	.icon-search {
@@ -31,6 +31,12 @@
 		border-radius: .3rem .3rem .3rem .15rem;
 		font-size: .9rem;
 		padding: 1rem 2.75rem;
+
+		.icon {
+			left: 1.25rem;
+			width: 1rem;
+			height: 1rem;
+		}
 	}
 
 	@include m(primary) {
@@ -60,6 +66,13 @@
 		border-width: 2px;
 		border-style: solid;
 		background-color: transparent;
+		padding-top: .55rem;
+		padding-bottom: .6rem;
+
+		&.btn--lg {
+			padding-top: .9rem;
+			padding-bottom: .9rem;
+		}
 	}
 
 	@include m(primary) {

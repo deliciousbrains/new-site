@@ -11,11 +11,28 @@
 	<?php include_once('parts/nav-migrate.php'); ?>
 	<div class="plugin-intro__content">
 
-		<a href="https://www.youtube.com/watch?v=fHFcH4bCzmU" class="plugin-intro__play" data-lity>
-			<svg class="icon icon-play">
-				<use xlink:href="#icon-play"></use>
+		<div class="plugin-intro__content--mobile">
+			<svg class="icon icon-migrate">
+				<use xlink:href="#icon-migrate"></use>
 			</svg>
-		</a>
+			<div>
+				<a href="https://www.youtube.com/watch?v=fHFcH4bCzmU" class="btn btn--outline btn--info" data-lity>
+					Watch Demo
+					<svg class="icon icon-chevron-right">
+						<use xlink:href="#icon-chevron-right"></use>
+					</svg>
+				</a>
+				<a href="#" class="btn btn--info">Get Plugin</a>
+			</div>
+		</div>
+
+		<div class="plugin-intro__content--desktop">
+			<a href="https://www.youtube.com/watch?v=fHFcH4bCzmU" class="plugin-intro__play" data-lity>
+				<svg class="icon icon-play">
+					<use xlink:href="#icon-play"></use>
+				</svg>
+			</a>
+		</div>
 
 		<h1>WP Migrate DB Pro</h1>
 		<h2>Migration can be a beautiful thing</h2>
