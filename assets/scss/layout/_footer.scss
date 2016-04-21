@@ -27,13 +27,67 @@
 		//background: linear-gradient(to bottom, #fff 50%, palette(slate,300) 50%, #3e4951);
 		min-height: 300px;
 		@include bp(md) {
-			//background: linear-gradient(to right, #fff 50%, palette(slate,300) 50%, #3e4951);
 			min-height: 400px;
+		}
+
+		@include m(blog) {
+			background: linear-gradient(to bottom, #292b2d, #232527);
 		}
 
 		a {
 			transition: all .2s $transition;
 		}
+
+		@include e(blog) {
+			//background: linear-gradient(to bottom, #292b2d, #232527);
+
+			@include bp(md) {
+				flex: 0 0 50%;
+				max-width: 50%;
+				padding: 0;
+			}
+
+			> h3 {
+				display: flex;
+				padding-top: 1.75rem;
+				padding-bottom: 1.5rem;
+				background-color: #fff;
+				position: relative;
+
+				&::before,&::after {
+					content: '';
+					position: absolute;
+					right: 99.7%;
+					top: 0;
+					bottom: 0;
+					width: 99rem;
+					background-color: #fff;
+				}
+				&::after {
+					right: auto;
+					left: 99.7%;
+				}
+				.welcome__stars {
+					margin-left: auto;
+					white-space: nowrap;
+					padding-bottom: 0;
+					@include bp(md) {
+						padding-right: 7.5%;
+					}
+					.icon {
+						margin: 0;
+					}
+				}
+			} // h3
+
+			.welcome__product {
+				animation: none;
+				opacity: 1;
+				header {
+					padding-right: 7.5%;
+				}
+			}
+		} // blog
 
 		@include e(posts) {
 			background-color: #fff;//#3e4951;
@@ -60,7 +114,7 @@
 						color: palette(brand,200);
 					}
 				}
-			}
+			} // h3
 		}
 
 		@include e(contact) {
@@ -76,13 +130,13 @@
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				left: 99.9%;
+				left: 99.5%;
 				background-color: #3e4951;
 				width: 99rem;
 			}
 			&:after {
 				left: auto;
-				right: 99.9%;
+				right: 99.5%;
 			}
 
 			@include bp(md) {

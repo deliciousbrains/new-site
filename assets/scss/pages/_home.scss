@@ -271,22 +271,16 @@
 			flex: 1;
 			color: palette(blue,200);
 			position: relative;
+			padding-right: .5rem;
 
 			$icon-width: 2rem;
 
 			.icon {
 				text-align: center;
 				position: absolute;
-				//width: $icon-width;
-				//height: $icon-width;
-				//left: calc( (#{$column-width} + #{$icon-width}) * -1 );
-				//left: -3rem;
-
-				//@include bp(md) {
-					width: $icon-width*.75;
-					height: $icon-width*.75;
-					left: -2rem;
-				//}
+				width: $icon-width*.75;
+				height: $icon-width*.75;
+				left: -2rem;
 
 				@include bp(lg) {
 					width: $icon-width;
@@ -312,6 +306,18 @@
 				img {
 					width: $icon-width;
 				}
+			}
+		}
+
+		@include e(description) {
+			padding-left: 5%;
+			width: 62%;
+			@include bp(md) {
+				padding-left: 2rem;
+			}
+			@include bp(lg) {
+				padding-left: 3rem;
+				width: 50%;
 			}
 		}
 

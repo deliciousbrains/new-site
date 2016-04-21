@@ -140,4 +140,4 @@
 	</a>
 </nav>
 
-<?php include_once('parts/footer.php'); ?>
+<?php include_once('parts/footer-blog.php'); ?>
