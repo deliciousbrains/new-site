@@ -429,7 +429,7 @@
 			display: block;
 
 			@include bp(sm) {
-				width: 14.333%;
+				width: auto;
 				margin-right: 7.564%;
 			}
 		}
