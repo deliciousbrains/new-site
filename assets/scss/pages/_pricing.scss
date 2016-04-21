@@ -10,18 +10,18 @@
 		left: 50%;
 		transform: translateX(-50%);
 		margin-top: 3rem;
-		// padding-left: 5%;//$column-width - $half-gutter;
-		// padding-right: 5%;//$column-width - $half-gutter;
+		// padding-left: 5%;
+		// padding-right: 5%;
 
 		@include bp(md) {
 			//margin-top: 3rem;
 			padding-bottom: 2rem;
 		}
 
-		@include bp(1220px) {
-			padding-left: 0;
-			padding-right: 0;
-		}
+		// @include bp(1220px) {
+		// 	padding-left: 0;
+		// 	padding-right: 0;
+		// }
 
 		@include m(carousel) {
 			flex-wrap: nowrap;
@@ -359,7 +359,7 @@
 		padding: 3.5rem 5% 2.5rem;
 
 		@include bp(md) {
-			max-width: $max-width;
+			max-width: $narrow-max-width;
 			position: relative;
 			left: 50%;
 			width: 100%;
@@ -390,21 +390,17 @@
 		@include e(section) {
 			flex: 0 0 100%;
 			margin-top: 1rem;
-			padding-right: $column-width*2;
-			padding-left: $half-gutter;
 
 			@include bp(md) {
 				flex: 0 0 50%;
-				&:first-of-type {
-					padding-right: $half-gutter;
-					padding-left: $column-width*2;
-				}
+				padding-left: $half-gutter;
+				padding-right: $half-gutter;
 			}
 
 		}
 
 		@include e(actions) {
-			max-width: 780px;//$max-width;
+			max-width: $narrow-max-width;//$max-width;
 			position: relative;
 			left: 50%;
 			width: 100%;
@@ -414,13 +410,13 @@
 			align-items: center;
 			border-top: 1px solid palette(grey,700);
 			padding-top: 1.25rem;
-			padding-left: 5%;
-			padding-right: 5%;
+			padding-left: $half-gutter;
+			padding-right: $half-gutter;
 
-			@include bp(1220px) {
-				padding-left: 0;
-				padding-right: 0;
-			}
+			// @include bp(1220px) {
+			// 	padding-left: 0;
+			// 	padding-right: 0;
+			// }
 
 			span {
 				font-size: .9rem;

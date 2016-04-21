@@ -39,12 +39,12 @@
 	text-align: center;
 	padding: 1.5rem;
 
-	@include bp(sm) {
+	@include bp(600px) {
 		flex: 0 0 33.333%-$gutter-width;
 		max-width: 33.333%-$gutter-width;
 	}
 
-	@include bp(md) {
+	@include bp(lg) {
 		flex: 0 0 20%-$gutter-width;
 		max-width: 20%-$gutter-width;
 	}
@@ -88,5 +88,15 @@
 
 	& + .btn {
 		margin-top: 1.5rem;
+
+		@include bp(515px 600px) {
+			flex-basis: 51%;
+			text-align: center;
+		}
+
+		@include bp(820px lg) {
+			flex-basis: 42%;
+			text-align: center;
+		}
 	}
 }
