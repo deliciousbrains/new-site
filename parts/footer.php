@@ -20,7 +20,7 @@
 							<a href="/blog-post.php">Hosting WordPress Yourself Part 8 – Complete Nginx Configuration</a>
 						</h4>
 						<span class="latest-post__meta">
-							<span class="blog__post__comment-count">13</span>
+							<a href="#" class="blog__post__comment-count">13</a>
 						</span>
 					</header>
 
@@ -33,7 +33,7 @@
 							<a href="/blog-post.php">WP Offload S3 0.9.7 & Pro Upgrade 1.0.2 Released with 3 New Addons</a>
 						</h4>
 						<span class="latest-post__meta">
-							<span class="blog__post__comment-count">3</span>
+							<a href="#" class="blog__post__comment-count">3</a>
 						</span>
 					</header>
 
@@ -46,7 +46,7 @@
 							<a href="/blog-post.php">WordPress Plugin Review: GitHub README</a>
 						</h4>
 						<span class="latest-post__meta">
-							<span class="blog__post__comment-count">27</span>
+							<a href="#" class="blog__post__comment-count">27</a>
 						</span>
 					</header>
 

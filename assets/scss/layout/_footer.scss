@@ -37,7 +37,7 @@
 
 		@include e(posts) {
 			background-color: #fff;//#3e4951;
-			padding: 0 $gutter-width-px/2;
+			//padding: 0 $gutter-width-px/2;
 
 			@include bp(md) {
 				flex: 0 0 50%;
@@ -51,8 +51,11 @@
 				padding-bottom: 1.5rem;
 				a {
 					margin-left: auto;
+					white-space: nowrap;
 					//padding-right: $gutter-width;
-					padding-right: 7.5%;
+					@include bp(md) {
+						padding-right: 7.5%;
+					}
 					&:hover {
 						color: palette(brand,200);
 					}
@@ -214,7 +217,11 @@
 @include b(latest-post) {
 	border-top: 1px solid palette(grey,700);
 	position: relative;
-	padding: 1.5rem 7.5% 1.5rem 0;
+	padding: 1.5rem 0 1.5rem 0;
+
+	@include bp(md) {
+		padding-right: 7.5%;
+	}
 
 	@include e(header) {
 		display: flex;
@@ -238,7 +245,7 @@
 		flex: 0 0 $column-width*2 - $gutter-width*2;
 		width: $column-width*2 - $gutter-width*2;
 		margin-left: auto;
-		text-align: center;
+		text-align: right;
 	}
 
 	&:before {
@@ -255,6 +262,11 @@
 		width: 2rem;
 		height: 2rem;
 		line-height: 2rem;
+		color: #fff;
+		&:hover {
+			color: #fff;
+			background-color: palette();
+		}
 
 		//padding-right:
 	}
