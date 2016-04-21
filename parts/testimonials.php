@@ -7,26 +7,28 @@
 <section class="testimonials">
 	<div class="container">
 
+		<span class="welcome__stars">
+			<svg class="icon icon-star">
+				<use xlink:href="#icon-star"></use>
+			</svg>
+			<svg class="icon icon-star">
+				<use xlink:href="#icon-star"></use>
+			</svg>
+			<svg class="icon icon-star">
+				<use xlink:href="#icon-star"></use>
+			</svg>
+			<svg class="icon icon-star">
+				<use xlink:href="#icon-star"></use>
+			</svg>
+			<svg class="icon icon-star">
+				<use xlink:href="#icon-star"></use>
+			</svg>
+		</span>
+
 		<div class="owl-carousel">
 
 			<div class="item">
-				<span class="welcome__stars">
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-				</span>
+
 				<blockquote>
 
 					<p>
@@ -46,27 +48,10 @@
 					<cite>- Trevor Green<br><a href="#">[ Agreenweb - @trevogre ]</a></cite>
 
 				</blockquote>
-				<a href="/migrate.php" class="btn <?php echo $btn_class; ?>">Get Plugin</a>
 			</div>
 
 			<div class="item">
-				<span class="welcome__stars">
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-				</span>
+
 				<blockquote>
 					<p>
 						<span class="testimonials__quote testimonials__quote--left">
@@ -84,27 +69,10 @@
 
 					<cite>- Trevor Green<br><a href="#">[ Agreenweb - @trevogre ]</a></cite>
 				</blockquote>
-				<a href="/migrate.php" class="btn <?php echo $btn_class; ?>">Get Plugin</a>
 			</div>
 
 			<div class="item">
-				<span class="welcome__stars">
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-					<svg class="icon icon-star">
-						<use xlink:href="#icon-star"></use>
-					</svg>
-				</span>
+
 				<blockquote>
 					<p>
 						<span class="testimonials__quote testimonials__quote--left">
@@ -122,10 +90,11 @@
 
 					<cite>- Trevor Green<br><a href="#">[ Agreenweb - @trevogre ]</a></cite>
 				</blockquote>
-				<a href="/migrate.php" class="btn <?php echo $btn_class; ?>">Get Plugin</a>
 			</div>
 
 		</div>
+
+		<a href="/migrate.php" class="btn <?php echo $btn_class; ?>">Get Plugin</a>
 
 	</div>
 
