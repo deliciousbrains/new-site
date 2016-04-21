@@ -1,10 +1,18 @@
 @include b(affiliates) {
 	max-width: $narrow-max-width;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+
+	padding-left: 5%;
+	padding-right: 5%;
+
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	.intro + p > span {
 		color: palette(grey);
@@ -17,9 +25,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
+
+	@include bp(sm) {
+		flex-direction: row;
+	}
 
 	.btn {
-		margin: 0;
+		margin: 1rem 0 0;
+		text-align: center;
+		@include bp(sm) {
+			margin: 0;
+		}
 	}
 }
 

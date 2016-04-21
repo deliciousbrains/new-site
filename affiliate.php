@@ -45,7 +45,10 @@
 
 	<hr>
 
-	<p class="intro spacer">Have another questions? Send ‘em our way <a href="#" class="btn btn--outline btn--primary">Send Email</a></p>
+	<p class="intro spacer">
+		<span>Have another questions? Send ‘em our way </span>
+		<a href="#" class="btn btn--outline btn--primary">Send Email</a>
+	</p>
 
 </section>
 
