@@ -32,12 +32,14 @@
 		width: 100%;
 		text-align: center;
 		color: #fff;
+		margin-bottom: 1rem;
 
 		@include bp(md) {
 			flex: 0 0 50%;
 			max-width: 50%;
 			padding-right: $column-width/2;
 			text-align: right;
+			margin-bottom: 0;
 		}
 	}
 
