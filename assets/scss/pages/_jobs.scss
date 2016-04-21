@@ -1,19 +1,23 @@
 @include b(job-listing) {
 
-	max-width: $max-width;
+	//max-width: $max-width;
+	max-width: $narrow-max-width;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
 	flex-wrap: wrap;
-
+	padding-left: 5%;
+	padding-right: 5%;
 	margin-top: 4rem;
-	padding-right: $column-width*2 - $gutter-width;
-
 	line-height: 1.714;
 
+	@include bp(1220px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	@include e(intro) {
-		margin-left: $column-width*2 + $gutter-width*2;
 		margin-bottom: 1.5rem;
 		padding-bottom: .5rem;
 		border-bottom: 1px solid palette(grey,700);
@@ -32,7 +36,6 @@
 	} // intro
 
 	@include e(description) {
-		margin-left: $column-width*2 + $gutter-width*2;
 		margin-bottom: 2rem;
 
 		h3 {
