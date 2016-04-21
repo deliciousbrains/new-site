@@ -4,7 +4,11 @@
 	flex: 0 0 100%;
 	max-width: 100%;
 
-	padding: 2.5rem 0;
+	padding: 0;
+
+	.plugin-features--offload & {
+		padding: 2.5rem 0;
+	}
 
 	@include bp(md) {
 		padding: 0;

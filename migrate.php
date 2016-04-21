@@ -130,6 +130,7 @@
 	<figure class="figure-right">
 		<img src="/assets/images/product-fpo.jpg" alt="Product" >
 	</figure>
+
 </section>
 
 

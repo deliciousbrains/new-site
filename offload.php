@@ -137,7 +137,7 @@
 			</h2>
 		</div>
 	</div>
-	<!-- <img src="/assets/images/offload-intro.jpg" alt="Increase Your Speed, Increase Your Sales" > -->
+
 	<span class="plugin-features__bg" style="background-image: url(/assets/images/offload-intro.jpg);"></span>
 </section>
 
