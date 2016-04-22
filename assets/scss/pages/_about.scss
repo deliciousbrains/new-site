@@ -424,6 +424,10 @@
 			max-width: 50%;
 		}
 
+		.media {
+			align-items: flex-start;
+		}
+
 		.media__img {
 			margin: 0 auto .5rem;
 			display: block;
@@ -431,6 +435,9 @@
 			@include bp(sm) {
 				width: auto;
 				margin-right: 7.564%;
+			}
+			@include bp(md) {
+				width: $column-width*2;
 			}
 		}
 
