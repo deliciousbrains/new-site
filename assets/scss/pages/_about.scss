@@ -328,7 +328,7 @@
 		.about-giving--charity & {
 			bottom: 70%;
 			@include bp(sm) {
-				bottom: 60%;
+				bottom: 65%;
 			}
 			@include bp(lg) {
 				bottom: 0;
@@ -433,11 +433,12 @@
 			display: block;
 
 			@include bp(sm) {
-				width: auto;
+				//width: auto;
 				margin-right: 7.564%;
+				width: $column-width*2;
+				max-width: 3.75rem;
 			}
 			@include bp(md) {
-				width: $column-width*2;
 			}
 		}
 
