@@ -3,18 +3,6 @@
 	position: relative;
 	padding-top: 4rem;
 
-	// background-repeat: no-repeat;
-	// background-position: 100% 100%;
-	// background-size: 49%;
-
-	// @include bp(max 900px) {
-	// 	background-image: none !important;
-	// }
-
-	.container {
-		//flex-direction: column;
-	}
-
 	h2 {
 		text-align: center;
 		flex: 0 0 100%;
@@ -24,14 +12,11 @@
 	}
 
 	@include b(accordion) {
+		max-width: 100%;
 
-		@include bp(md) {
+		@include bp(1060px) {
 			width: 50% + $half-gutter;
 		}
-
-		// @include bp(lg) {
-		// 	width: 50% + $half-gutter;
-		// }
 
 		@include e(title) {
 			padding-right: $gutter-width*2;
@@ -48,7 +33,6 @@
 
 @include b(features) {
 	max-width: $max-width;
-	//width: 100%;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -72,11 +56,8 @@
 	}
 
 	.btn {
-		//margin-left: 33.3333%;
-		//width: 34%;
 		@include bp(lg) {
 			margin: 0 auto;
-			//width: auto;
 		}
 	}
 
