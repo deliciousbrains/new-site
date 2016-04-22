@@ -314,7 +314,9 @@
 
 		@include e(description) {
 			padding-left: 5%;
-			width: 62%;
+			@include bp(sm) {
+				width: 62%;
+			}
 			@include bp(md) {
 				padding-left: 2rem;
 			}

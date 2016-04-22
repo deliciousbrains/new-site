@@ -56,6 +56,7 @@
 					margin-left: auto;
 					white-space: nowrap;
 					padding-bottom: 0;
+					padding-right: 0;
 					@include bp(md) {
 						padding-right: 7.5%;
 					}
@@ -70,7 +71,9 @@
 				animation: none;
 				opacity: 1;
 				header {
-					padding-right: 7.5%;
+					@include bp(md) {
+						padding-right: 7.5%;
+					}
 				}
 			}
 		} // blog
